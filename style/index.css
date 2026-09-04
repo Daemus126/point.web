@@ -1,0 +1,142 @@
+:root {
+  --background: #343536;
+  --surface: #fffdf8;
+  --text: #20201d;
+  --muted: #def7ff;
+  --border: hsl(203, 17%, 82%);
+  --accent: #b33a2f;
+  --accent-dark: #84271f;
+  --Headerbg: #1d1a1a;
+  --colormain: #408fcb ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--surface);
+}
+
+.site-banner {
+    background-color: var(--colormain);
+    color:var(--surface);
+    padding: 2rem;
+   border-bottom: 0.5rem solid var(--accent);
+}
+
+.site-header,
+main,
+footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+
+
+.site-header h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.site-header > p:last-child {
+  max-width: 620px;
+  color: #fff;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+   overflow: hidden;
+  background-color:var(--colormain);
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+ul li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #dfdfdf ;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: var(--surface);
+  color: var(--colormain);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-heading h2,
+.section-heading p {
+  margin-top: 0;
+  color: #fff;
+}
+
+.section-heading h2 {
+  padding-top: 1rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--surface);
+  background-color: var(--colormain);
+
+}
+
+
+
+
+.subfooter {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--headerbg);
+ 
+}
+
+@media (max-width: 650px) {
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
