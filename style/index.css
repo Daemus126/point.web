@@ -1,26 +1,60 @@
 :root {
   --background: #343536;
-  --surface: #fffdf8;
+  --surface: #fffcf5;
   --text: #20201d;
   --muted: #def7ff;
   --border: hsl(203, 17%, 82%);
-  --accent: #b33a2f;
-  --accent-dark: #84271f;
+  --accent: #9c2323;
+  --accent-dark: #7e1313;
   --Headerbg: #1d1a1a;
-  --colormain: #408fcb ;
+  --colormain: #3485c4 ;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.header-color {
+  color:#205e8d
+}
 
 body {
   margin: 0;
-  font-family: roboto, sans-serif;
+  font-family: open-sans, sans-serif;
   line-height: 1.5;
   color: var(--text);
+  background-color: #f0f0f0;
+}
+
+
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--colormain);
+  display: flex;
+  justify-content: center;
+font-weight: bold;
+
+}
+
+ul li .nav-links {
+  float: left;
+}
+
+.nav-links a {
+  display: block;
+  color: #dfdfdf;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+.nav-links a:hover {
   background-color: var(--surface);
+  color: var(--colormain);
 }
 
 .site-banner {
@@ -53,34 +87,6 @@ footer {
 
 
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-   overflow: hidden;
-  background-color:var(--colormain);
-  display: flex;
-  justify-content: center;
-  
-  
-}
-
-ul li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #dfdfdf ;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-}
-
-/* Change the link and background color on hover */
-li a:hover {
-  background-color: var(--surface);
-  color: var(--colormain);
-}
 
 .eyebrow {
   margin: 0 0 0.5rem;
@@ -112,7 +118,58 @@ li a:hover {
   color: #fff;
 }
 
+ .feature-list {
+  list-style-type: square;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 14px;
+ 
+}
 
+ .info-grid-title {
+  color: #fff;
+  background-color: #1d1a1a;
+  padding: 1rem;
+  border-bottom: 1rem solid var(--colormain);
+  border-radius: 1rem;
+  min-height: 20%;
+  min-width: 100%;
+  float: left;
+
+
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 0 3rem;
+  clear: left;
+
+}
+.info-card {
+ 
+    display: flex;
+  flex-direction: column;
+  min-height: 75%;
+  max-width: 75%;
+  padding: 1.25rem;
+  border: 0.25rem solid var(--colormain);
+  color: var(--surface);
+  background-color: var(--colormain);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgb(80, 80, 80);
+
+}
+
+.info-card:hover {
+  background-color: var(--accent-dark);
+  color: var(--surface);
+  border-color: var(--accent-dark);
+}
 
 .footer {
   padding: 1rem;
