@@ -86,7 +86,11 @@ footer {
 }
 
 
-
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+ 
+}
 
 .eyebrow {
   margin: 0 0 0.5rem;
@@ -148,11 +152,12 @@ footer {
   clear: left;
 
 }
-.info-card {
+.info-card button {
  
     display: flex;
   flex-direction: column;
   min-height: 75%;
+  min-width: 75%;
   max-width: 75%;
   padding: 1.25rem;
   border: 0.25rem solid var(--colormain);
@@ -165,10 +170,21 @@ footer {
 
 }
 
-.info-card:hover {
+.info-card button a {
+  color: var(--surface);
+  text-decoration: none;
+}
+
+.info-card button:hover {
   background-color: var(--accent-dark);
   color: var(--surface);
   border-color: var(--accent-dark);
+}
+
+
+.p-info-grid {
+
+font-weight: bold;
 }
 
 .footer {
@@ -177,7 +193,7 @@ footer {
   border-top: 1px solid var(--border);
   color: var(--surface);
   background-color: var(--colormain);
-
+margin-top: 2rem;
 }
 
 

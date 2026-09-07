@@ -1,122 +1,117 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+
+
+
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+
+      <body>
+        <div className="site-banner">
+          <header className="site-header">
+
+
+
+            <div className="navbar">
+              <nav>
+                <ul className="nav-links">
+                  <li  className="nav-item"><a href="#">Home</a></li>
+                  <li className="nav-item"><a href="#">About Us</a></li>
+                  <li className="nav-item"><a href="#">LearnerTrack</a></li>
+                  <li className="nav-item"><a href="#">Support</a></li>
+                  <li className="nav-item"><a href="#">Service</a></li>
+                  <li className="nav-item"><a href="#">Contact Us</a></li>
+                </ul>
+
+              </nav>
+            </div>
+
+
+            <img className="eyebrow" src="Pictures/monterpoint.logo.blue.pdf" alt="Monterpoint Logo" />
+            <h1>LearnerTrack</h1>
+            <h2> a verstatile, secure, cost-effective and reliable cloud based MIS</h2>
+            <p> 20 years of continuous development with local authority adult learning services, supporting all DfE
+              funding streams.</p>
+          </header>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+
+<main>
+        <div className="Section-Header">
+          <h1 className="header-color">Welcome to LearnerTrack</h1>
+          <h3 className="header-color">A cloud-based MIS for local authorities</h3>
+          <p><strong>LearnerTrack</strong> is a feature rich, cost-effective MIS for local authority adult education services. Designed
+            from the start as a cloud based solution, it supports all DfE funding streams.Whether you are an
+            administrator, educator, or learner, LearnerTrack
+            provides the tools you need to
+            manage your educational environment effectively. Explore our features and see how LearnerTrack can
+            benefit your institution.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
+          <h2 className="header-color"> What makes us different from other suppliers?</h2>
+          <ul className="feature-list">
+            <li> Three development cycles per year, that are shaped by you. </li>
+            <li> Round the clock support, including non-AI live chat support. </li>
+            <li> Completely accessible from anywhere, our whole system can be accessed through a web browser,
+              meaning no installations on your end. </li>
+            <li> Minimal IT expertise needed.</li>
           </ul>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+
+        <h3 className="info-grid-title">Key Features:</h3>
+        <div className="info-grid">
+
+          <button className="info-card"  > <a href="app/Pages/Performance.html">Performance Analysis </a> </button>
+
+          <div className="info-card">
+            Quick Enrol
+          </div>
+          <div className="info-card">
+            Webenrol
+          </div>
+          <div className="info-card">
+            Data-Entry
+          </div>
+          <div className="info-card">
+            Xfer
+          </div>
+          <div className="info-card">
+            Messaging
+          </div>
+          <div className="info-card">
+            Community lead updates
+          </div>
+          <div className="info-card">
+            Finance
+          </div>
+        </div>
+ </main>
+
+
+
+
+      </body>
+
+
+
+
+
+      <footer>
+
+
+
+      </footer>
+
     </>
+
+
   )
 }
 
-export default App
+export default App;
