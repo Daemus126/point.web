@@ -48,6 +48,8 @@ ul li .nav-links {
   float: left;
 }
 
+
+
 .nav-links a {
   display: block;
   color: var(--colormain);
@@ -139,6 +141,15 @@ background-image: linear-gradient(to right,  rgb(45, 121, 207), rgba(73, 85, 255
   color: #000;
   font-weight: 14px;
  
+}
+
+ul.feature-list li {
+   list-style-type: none;
+ }
+
+ ul.feature-list li:before {
+ 
+  content:"\2714\0020"; 
 }
 
  .info-grid-title {

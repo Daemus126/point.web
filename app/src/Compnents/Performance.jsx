@@ -1,20 +1,22 @@
 function Performance() {
 
     return (
-        <>
-
-        
-    <footer className="footer">
-        <h3> Contact us Via </h3>
-        <p> <strong>For Enquireies:</strong> info@Monterpoint.com </p>
-        <p> <strong>For Sales: </strong> 	sales@monterpoint.com</p>
-    </footer>   
-    <subfooter className="subfooter">
-        <p> 2026 Monterpoint. All rights reserved.</p>
-        </subfooter>
-
-
-        </>
+        <><h2>Performance Analysis</h2>
+      <p> Qualification Achievement Rates and demographic Analysis of your ILR State of the art QAR, KPI and performance analysis. </p>
+      <h3> Features </h3>
+ <ul>
+  <li>KPI dashboard</li>
+  <li>RAG views by key ILR dimensions</li>
+  <li>Interactive Analysis CUBE querying</li>
+  <li>reporting on ASL provision</li>
+  <li>localised SAR and KPI target setting</li>
+  <li>DfE Funding reports</li>
+  <li>pdf report summaries by subcontracted partner</li>
+  <li>optional bespoke SAR reporting</li>
+  <li>OFSTED reports</li>
+</ul>
+<img src="Pictures/performance.PNG" alt="Performance Analysis" />
+      </>
     );
 
 

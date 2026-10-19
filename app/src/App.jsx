@@ -1,11 +1,21 @@
 import { useState } from 'react'
 import './App.css'
 import Footer from './Compnents/Footer.jsx'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Performance from './Compnents/Performance.jsx'
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+
+  function scrollHome() {
+    document.getElementById('scrollHome').scrollIntoView({
+      behavior: 'smooth'
+    });
+    console.log("clcikScroll")
+  };
 
 
   function scrollLearnerTrack() {
@@ -37,24 +47,193 @@ function App() {
   };
 
 
+  function ShowSecurity() {
+    setIsVisible(!isVisible)
+    console.log("isVisible", isVisible)
+  }
+
+  function Performance() {
+    return (
+      <><h2>Performance Analysis</h2>
+        <p> Qualification Achievement Rates and demographic Analysis of your ILR State of the art QAR, KPI and performance analysis. </p>
+        <h3> Features </h3>
+        <ul>
+          <li>KPI dashboard</li>
+          <li>RAG views by key ILR dimensions</li>
+          <li>Interactive Analysis CUBE querying</li>
+          <li>reporting on ASL provision</li>
+          <li>localised SAR and KPI target setting</li>
+          <li>DfE Funding reports</li>
+          <li>pdf report summaries by subcontracted partner</li>
+          <li>optional bespoke SAR reporting</li>
+          <li>OFSTED reports</li>
+        </ul>
+        <img src="Pictures/performance.PNG" alt="Performance Analysis" />
+      </>
+    )
+  }
+
+
+  function QuickEnrol() {
+    return (
+      <><h2>Quick Enrolment</h2><p>  Streamlined rapid enrolment and publishing tools
+        QuickEnrol is a suite of functionality that helps your organisation to manage all the course and enrolment information, for both staff and public.
+        QuickEnrol increases the volume of enrolments that you can manage in a short space of time.
+      </p>
+        <ul>
+          <li>Quick.Enrol interface for frontline staff</li>
+          <li>Queue and enquiry management</li>
+          <li>Printed enrolment confirmations with learner account statements</li>
+          <li>Course information sheets</li>
+          <li>Marketing brochure design support</li>
+          <li>Fully integrated with LearnerTrack Web Enrol</li>
+        </ul>
+        <img src="Pictures/QuickEnrol.png" alt="Quick Enrol" />
+      </>
+
+
+    )
+  }
+
+
+
+  function WebEnrol() {
+    return (
+       <>
+        <h2>Web Enrolment</h2>
+        <p> Online Prospectus and public enrolment system.
+          Web.Enrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
+          Fully synchronised with your MIS, the public can make enquiries and enrol in a live environment.
+          Our Web.Enrol product is certified to the prestigious PCIDSS security standards introduced by Visa and MasterCard to ensure cardholders details are securely protected.</p>
+<ul>
+ <li> Public web site automatically generated from your live MIS data</li>
+ <li>Comprehensive keyword and text search facility</li>
+ <li>Search by course category, location and time/day</li>
+ <li>Feeds web based enquiries directly into your MIS</li>
+ <li>View availability of places, live from MIS data</li>
+ <li>Highest standards for Access by those with disabilities</li>
+ <li>No site maintenance - automatically published from your MIS data</li>
+<li>Design templates for easy integration with your own web site </li>
+ <li>We are working towards a fully documented API for developers and designers</li>
+ <li>Bespoke design and integration service also available</li>
+</ul>
+      </>
+    )
+  }
+
+  function DataEntry() {
+    return (
+      <>
+      <h2>Data Entry</h2>
+      <p>Direct entry and management of core MIS data.
+
+Data Entry is LearnerTrack's core set of user interfaces for adding, editing and reporting on data in all the key LearnerTrack data structures. This module includes all the main searching and reporting facilities that your organisation needs to manage a fast and accurate data entry team.</p>
+      <ul> 
+     <li>  Add and edit all your data via object managers</li>
+<li>Fast and user friendly search facilities</li>
+<li>Integrated lookups for LARA Learning Aims, Royal Mail Postcode data</li>
+<li>Instant DfE business rule validation</li>
+      </ul>
+      </>
+    )
+  }
+
+  function Xfer() {
+    return (
+      <>
+      <h2>Xfer</h2>
+      <p>X-fer enables data from 3rd party MIS to be imported into LearnerTrack.
+X-fer enables data from 3rd party MIS to be imported, merging information from multiple subcontracted providers. X-fer offers import paths to transfer data from 3rd party systems such as your own legacy database systems and from sub-contracted providers own MIS. Data transfer can be one-off or set up as an automated service that synchronises data from your own system, enabling you to keep your existing MIS and simultaneously implement the LearnerTrack Web Enrol or Analysis to add value to your legacy MIS.</p>
+   <ul>
+   <li> upload portal with feedback and reporting </li>
+   <li>transfer data to and from subcontrating partners</li>
+   <li>provider contract management reporting</li>
+   </ul>
+   </>
+    )
+  }
+
+  function Messaging() {
+    return (
+      <>
+      <h2>Messaging</h2>
+      <p>
+LearnerTrack internal communications system.
+The Messages module allows users to send and receive messages within LearnerTrack; so you do not need to send personal data over email. You can send a message to individuals or a named group. .
+      </p>
+      <ul>
+        <li>group subscriptions</li>
+        <li>notifications</li>
+        <li>removes need to send personal data over email</li>
+        <li>get updates on the system and pending changes</li>
+        <li>pass information to groups within our organisation</li>
+        <li>very easy to use</li>
+      </ul>
+<h2>Internal </h2>
+<p>Internal and external communications system.
+The Messaging modules combine the power of email and SMS messaging to make sure everyone has the information they need, when they need it, automatically.</p>
+<ul>
+ <li> Automated SMS and email warnings to staff and learners when courses are cancelled, Bad Attendance, Enrolemnt information ect.</li>
+ <li> A user interface for texting Ad hoc messages to individuals and groups</li>
+</ul>
+      </>
+    )
+  }
+
+  function ILR() {
+    return (
+      <>
+      <h2>ILR</h2>
+      <p> ILR manager.
+Comprehensive management for ILR data and XML files.</p>
+<ul>
+  <li>ILR generation in seconds</li>
+  <li>support for all DfE funding streams</li>
+  <li>View individual ILR data entities</li>
+  <li>download XML ILR files for subcontractors</li>
+</ul>
+      </>
+    )
+  }
+
+  function Finance() {
+    return (
+      <>
+      <h2>Finance</h2>
+      <p>
+        Financial tools for course fees, payments and cash flow.
+Fees module provides you with basic financial management tools to track all the fee income relating to your courses as well as payments relating to examination fees, materials, overheads and any other ad-hoc charges you need to record against learner or course accounts.
+      </p>
+      <ul>
+        <li>Individual learner accounts</li>
+        <li>Course accounts</li>
+        <li>Fully editable nominal accounts</li>
+        <li>Cash flow and fee income summaries</li>
+        <li>Creditor and debtor lists</li>
+        <li>Comprehensive audit trails</li>
+      </ul>
+      </>
+    )
+  }
+
+
+
   return (
-
-
-
-
 
     <>
 
+
+
       <body>
         <div className="site-banner">
-          <header className="site-header">
+          <header className="site-header" id='scrollHome'>
 
 
-  <img className="eyebrow" src="Pictures/logo.PNG" alt="Monterpoint Logo" />
+            <img className="eyebrow" src="Pictures/logo.PNG" alt="Monterpoint Logo" />
             <div className="navbar">
               <nav>
                 <ul className="nav-links">
-                  <li className="nav-item"><a href="#">Home</a></li>
+                  <li className="nav-item" onClick={() => { scrollHome() }}><a href="#"> Home</a></li>
                   <li className="nav-item" onClick={() => { scrollLearnerTrack() }}><a href="#">LearnerTrack</a></li>
                   <li className="nav-item" onClick={() => { scrollAbout() }}><a href="#">About Us</a></li>
                   <li className="nav-item" onClick={() => { scrollSupport() }}><a href="#">Support</a></li>
@@ -66,26 +245,27 @@ function App() {
         </div>
 
 
-      <img src="./Adult-education-class.jpg" alt="Adult Education Class"/>
-      <div className="sub-banner" >
-        <h1>LearnerTrack</h1>
-        <h2> a verstatile, secure, cost-effective and reliable cloud based MIS</h2>
-        <p> 20 years of continuous development with local authority adult learning services, supporting all DfE
-          funding streams.</p>
-          </div>
-          
+        <img src="./Adult-education-class.jpg" alt="Adult Education Class" />
+        <div className="sub-banner" >
+          <h1>LearnerTrack</h1>
+          <h2> a verstatile, secure, cost-effective and reliable cloud based MIS</h2>
+          <p> 20 years of continuous development with local authority adult learning services, supporting all DfE
+            funding streams.</p>
+        </div>
+
 
         <main>
           <div className="Section-Header">
             <h1 className="header-color">Whate We offer</h1>
 
             <ul className="feature-list">
-              <li> <img src="Pictures/tick.PNG" alt="Tick Mark" /> 25 Years of uninterrupted Service </li>
-              <li> A Cloudbased system with zero maintenance overheads </li>
-              <li> Secure access from anywhere</li>
-              <li> Ideal for subcrontracting with QAR based performance reporting</li>
-              <li> Personal Dashboards and self-enrolment for learners online</li>
+              <li >  25 Years of uninterrupted Service </li>
+              <li > A Cloudbased system with zero maintenance overheads </li>
+              <li > Secure access from anywhere</li>
+              <li > Ideal for subcrontracting with QAR based performance reporting</li>
+              <li > Personal Dashboards and self-enrolment for learners online</li>
               <li> Unlimited Users</li>
+              
             </ul>
             <h3 className="header-color">A cloud-based MIS for local authorities</h3>
             <p><strong>LearnerTrack</strong> is a feature rich, cost-effective MIS for local authority adult education services. Designed
@@ -99,44 +279,78 @@ function App() {
           </div>
 
           <h3 className="info-grid-title" id='scrollLearnerTrack'>Key Features:</h3>
-          <div className="info-grid">
 
-            <div className="info-card">Performance Analysis
-              <p>Qualification Achievement Rates and demographic Analysis of your ILR
-                State of the art QAR, KPI and performance analysis.</p>
-            </div>
 
-            <div className="info-card">
-              Quick Enrol
-              <image src="./QuickEnrol.png" alt="Quick Enrol" />
-              <p>Quick Enrol is a suite of functionality that helps your organisation to manage all the course and enrolment information,
-                for both staff and public.</p>
-            </div>
-            <div className="info-card">
-              Webenrol
-              <p>We are proud to offer a new version of our WebEnrol system, with more functionality and improved user experience.</p>
-            </div>
-            <div className="info-card">
-              Data-Entry
-              <p>Data Entry is LearnerTrack's core set of user interfaces for adding, editing and reporting on data in all the key LearnerTrack data structures.</p>
-            </div>
-            <div className="info-card">
-              Xfer
-              <p>X-fer enables data from 3rd party MIS to be imported, merging information from multiple subcontracted providers.</p>
-            </div>
-            <div className="info-card">
-              Messaging
-              <p>Messaging is a LearnerTrack module that enables you to send messages to learners with ease</p>
-            </div>
-            <div className="info-card">
-              ILR <p>Comprehensive management for ILR data and XML files.</p>
-            </div>
-            <div className="info-card">
-              Finance
-              <p>Financial tools for course fees, payments and cash flow</p>
-            </div>
+          <BrowserRouter>
+            <nav>
+              <div className="info-grid">
+                <div className="info-card">
 
-          </div>
+                  <NavLink to="/performance"> Performance Analysis
+                    <p>Qualification Achievement Rates and demographic Analysis of your ILR
+                      State of the art QAR, KPI and performance analysis.</p>
+                  </NavLink >
+                </div>
+
+                <div className="info-card">
+                  <NavLink to="/quickenrol">
+                    Quick Enrol
+                    <img src="./QuickEnrol.png" alt="Quick Enrol" />
+                    <p>Quick Enrol is a suite of functionality that helps your organisation to manage all the course and enrolment information,
+                      for both staff and public.</p>
+                  </NavLink >
+                </div>
+                <div className="info-card">
+                  <NavLink to="/webenrol">
+                    Webenrol
+                    <p>We are proud to offer a new version of our WebEnrol system, with more functionality and improved user experience.</p>
+                  </NavLink >
+                </div>
+                <div className="info-card">
+                  <NavLink to="/dataEntry">
+                    Data-Entry
+                    <p>Data Entry is LearnerTrack's core set of user interfaces for adding, editing and reporting on data in all the key LearnerTrack data structures.</p>
+                  </NavLink>
+                </div>
+                <div className="info-card">
+                  <NavLink to="/xfer">
+                    Xfer
+                    <p>X-fer enables data from 3rd party MIS to be imported, merging information from multiple subcontracted providers.</p>
+                  </NavLink>
+                </div>
+                <div className="info-card">
+                  <NavLink to="/messaging">
+                    Messaging
+                    <p>Messaging is a LearnerTrack module that enables you to send messages to learners with ease</p>
+                  </NavLink>
+                </div>
+                <div className="info-card">
+                  <NavLink to="/ilr">
+                    ILR
+                    <p>Comprehensive management for ILR data and XML files.</p>
+                  </NavLink>
+                </div>
+                <div className="info-card">
+                  <NavLink to="/finance">
+                    Finance
+                    <p>Financial tools for course fees, payments and cash flow</p>
+                  </NavLink>
+                </div>
+              </div>
+            </nav>
+            <Routes>
+              <Route path="/performance" element={<Performance />} />
+              <Route path="/quickenrol" element={<QuickEnrol />} />
+              <Route path="/webenrol" element={<WebEnrol />} />
+              <Route path="/dataEntry" element={<DataEntry />} />
+              <Route path="/xfer" element={<Xfer />} />
+              <Route path="/messaging" element={<Messaging />} />
+              <Route path="/ilr" element={<ILR />} />
+              <Route path="/finance" element={<Finance />} />
+            </Routes>
+          </BrowserRouter>
+
+
 
           <h1 className="header-color" id="scrollAbout">About Monterpoint Technologies</h1>
           <p><strong>Who are we?</strong> We are a web company dedicated to supporting DfE funded learning providers. Our team has been securely hosting local
@@ -147,7 +361,58 @@ function App() {
             LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private.
             The product also provides tools and monitoring to help customers implement security with their teams. </p>
 
-            <button className="security-button"> See Specs</button>
+          <button className="security-button" onClick={ShowSecurity}> See Specs</button>
+          {isVisible &&
+            <><div>
+              <h2>Technology</h2>
+              <p>LearnerTrack is hosted in a secure dedicated server farm connected to a super-fast secure network.</p>
+
+              <h3>Hosting Environment</h3>
+              <ul>
+                <li>Prime Tier III UK data centre location</li>
+                <li>ISO 27001 accreditation for IT security</li>
+                <li>Diverse N+1 power supply</li>
+                <li>On-site diesel generators</li>
+                <li>24/7 on-site security and support</li>
+                <li>48+ cameras with 90 day minimum recordings</li>
+                <li>Multiple redundant cooling systems</li>
+                <li>Multiple diverse network connections</li>
+              </ul>
+              <h2>Security Specifications</h2>
+              <p>
+                LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private. The product also provides tools and monitoring to help customers implement security with their teams.
+              </p>
+              <h3>Physical Security</h3>
+              <p>
+                Security personnel guard the co-location sites 24 hours a day seven days a week. In addition intruder detection systems, CCTV, and card access systems control access both internally and externally.
+              </p>
+              <h3>Access Provision</h3>
+              <p>
+                The precise location of our physically secure hosting site is kept confidential. Access to the LearnerTrack Servers is limited to authorized Monterpoint engineers, by special arrangement once a thorough identity confirmation procedure has been passed.
+              </p>
+              <h3>Power Supply</h3>
+              <p>
+                The electrical supply to both remote access and power management devices, and hence to the LearnerTrack Servers is via an uninterruptible power supply (UPS), it will continue to run in the event of an external power supply failure with no disruption to the LearnerTrack Service.
+              </p>
+              <h3>Environment</h3>
+              <p>
+                A constant ambient temperature of 22° Celsius (plus/minus 2° Celsius) and a relative humidity of 30% to 70% are maintained.
+              </p>
+              <h3>Fire Detection and Prevention</h3>
+              <p>
+                The fire detection system will provide the earliest possible warning and covers all areas, including under false floors.
+              </p>
+              <h3>Back-up/Restore and Disaster Recovery</h3>
+              <ul>
+                <li>Daily Back-up of Entire Database</li>
+                <li>Daily back-ups rotated on weekly cycle</li>
+                <li>Weekly Back-up of Entire Database</li>
+                <li>Full Data roll back to any point during the previous 2 months</li>
+              </ul>
+
+
+            </div></>
+          }
 
           <div className="feature-offer">
 
@@ -227,7 +492,7 @@ function App() {
 
       </body >
 
-  <img src="awards/cybersecurity-licence.png" alt="Cybersecurity Licence"/>
+      <img src="awards/cybersecurity-licence.png" alt="Cybersecurity Licence" />
 
       <Footer />
 
