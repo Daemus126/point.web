@@ -88,7 +88,6 @@ footer {
 .site-header h1 {
   max-width: 760px;
   margin: 0;
-  font-size: clamp(2.4rem, 7vw, 5.5rem);
   line-height: 0.95;
 }
 
@@ -353,6 +352,10 @@ justify-content: flex-start;
  
 }
 
+.verify{
+  color: rgb(41, 39, 39);
+  text-align: center;
+}
 
 
 .subfooter {

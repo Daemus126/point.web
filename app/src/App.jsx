@@ -18,6 +18,7 @@ import webenrol from './Pictures/webenrol.jpg'
 import webenroltwo from './Pictures/webenroltwo.jpg'
 import dentryimg from './Pictures/dentryimg.jpg'
 import securityimg from './Pictures/securityimg.png'
+import cyberessencial from './Pictures/cyberessencial.png'
 import AdultEducationClass from './Pictures/Adult-education-class.jpg'
 
 
@@ -544,8 +545,11 @@ Fees module provides you with basic financial management tools to track all the 
 
       </body >
 
+<div className='verify'>
+      <h2> Verified By</h2>
       <img className='securityimg' src={securityimg} alt="security liecence" />
-
+       <img className='securityimg' src={cyberessencial} alt="security liecence" />
+</div>
       <Footer />
 
 
