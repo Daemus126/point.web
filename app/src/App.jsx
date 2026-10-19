@@ -17,6 +17,7 @@ import quickEnrol from './Pictures/quickenrol.jpg'
 import webenrol from './Pictures/webenrol.jpg'
 import webenroltwo from './Pictures/webenroltwo.jpg'
 import dentryimg from './Pictures/dentryimg.jpg'
+import securityimg from './Pictures/securityimg.png'
 import AdultEducationClass from './Pictures/Adult-education-class.jpg'
 
 
@@ -543,7 +544,7 @@ Fees module provides you with basic financial management tools to track all the 
 
       </body >
 
-      <img src="awards/cybersecurity-licence.png" alt="Cybersecurity Licence" />
+      <img className='securityimg' src={securityimg} alt="security liecence" />
 
       <Footer />
 
