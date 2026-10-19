@@ -3,7 +3,21 @@ import './App.css'
 import Footer from './Compnents/Footer.jsx'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import Performance from './Compnents/Performance.jsx'
+import Logo from './Pictures/logo.PNG'
+import Gauge from './Pictures/gauge-chart.png'
+import QEIMG from './Pictures/QEIMG.png'
+import WEBIMG from './Pictures/enroll.png'
+import Dentry from './Pictures/Dentry.png'
+import Xfers from './Pictures/Xfers.png'
+import messaging from './Pictures/messaging.png'
+import folder from './Pictures/folder.png'
+import investment from  './Pictures/investment.png'
+import performaceAnalysis from './Pictures/performanceAnalysis.jpg'
+import quickEnrol from './Pictures/quickenrol.jpg'
+import webenrol from './Pictures/webenrol.jpg'
+import webenroltwo from './Pictures/webenroltwo.jpg'
+import dentryimg from './Pictures/dentryimg.jpg'
+import AdultEducationClass from './Pictures/Adult-education-class.jpg'
 
 
 function App() {
@@ -54,7 +68,9 @@ function App() {
 
   function Performance() {
     return (
-      <><h2>Performance Analysis</h2>
+      <>
+      <div className="feature-offer">
+      <h2>Performance Analysis</h2>
         <p> Qualification Achievement Rates and demographic Analysis of your ILR State of the art QAR, KPI and performance analysis. </p>
         <h3> Features </h3>
         <ul>
@@ -68,7 +84,8 @@ function App() {
           <li>optional bespoke SAR reporting</li>
           <li>OFSTED reports</li>
         </ul>
-        <img src="Pictures/performance.PNG" alt="Performance Analysis" />
+        <img className='perfomimg' src={performaceAnalysis} alt="Performance Analysis" />
+        </div>
       </>
     )
   }
@@ -76,7 +93,9 @@ function App() {
 
   function QuickEnrol() {
     return (
-      <><h2>Quick Enrolment</h2><p>  Streamlined rapid enrolment and publishing tools
+      <>
+      <div className="feature-offer">
+      <h2>Quick Enrolment</h2><p>  Streamlined rapid enrolment and publishing tools
         QuickEnrol is a suite of functionality that helps your organisation to manage all the course and enrolment information, for both staff and public.
         QuickEnrol increases the volume of enrolments that you can manage in a short space of time.
       </p>
@@ -88,7 +107,8 @@ function App() {
           <li>Marketing brochure design support</li>
           <li>Fully integrated with LearnerTrack Web Enrol</li>
         </ul>
-        <img src="Pictures/QuickEnrol.png" alt="Quick Enrol" />
+        <img className='quickEnrol' src={quickEnrol} alt="Quick Enrol" />
+        </div>
       </>
 
 
@@ -100,6 +120,7 @@ function App() {
   function WebEnrol() {
     return (
        <>
+       <div className="feature-offer">
         <h2>Web Enrolment</h2>
         <p> Online Prospectus and public enrolment system.
           Web.Enrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
@@ -117,6 +138,9 @@ function App() {
  <li>We are working towards a fully documented API for developers and designers</li>
  <li>Bespoke design and integration service also available</li>
 </ul>
+ <img className='webenrolimg' src={webenrol} alt="webenrol" />
+ <img className='webenrolimg' src={webenroltwo} alt="webenrol" />
+</div>
       </>
     )
   }
@@ -124,6 +148,7 @@ function App() {
   function DataEntry() {
     return (
       <>
+      <div className="feature-offer">
       <h2>Data Entry</h2>
       <p>Direct entry and management of core MIS data.
 
@@ -134,6 +159,8 @@ Data Entry is LearnerTrack's core set of user interfaces for adding, editing and
 <li>Integrated lookups for LARA Learning Aims, Royal Mail Postcode data</li>
 <li>Instant DfE business rule validation</li>
       </ul>
+       <img className='webenrolimg' src={dentryimg} alt="dentryimg" />
+      </div>
       </>
     )
   }
@@ -141,6 +168,7 @@ Data Entry is LearnerTrack's core set of user interfaces for adding, editing and
   function Xfer() {
     return (
       <>
+       <div className="feature-offer">
       <h2>Xfer</h2>
       <p>X-fer enables data from 3rd party MIS to be imported into LearnerTrack.
 X-fer enables data from 3rd party MIS to be imported, merging information from multiple subcontracted providers. X-fer offers import paths to transfer data from 3rd party systems such as your own legacy database systems and from sub-contracted providers own MIS. Data transfer can be one-off or set up as an automated service that synchronises data from your own system, enabling you to keep your existing MIS and simultaneously implement the LearnerTrack Web Enrol or Analysis to add value to your legacy MIS.</p>
@@ -149,6 +177,7 @@ X-fer enables data from 3rd party MIS to be imported, merging information from m
    <li>transfer data to and from subcontrating partners</li>
    <li>provider contract management reporting</li>
    </ul>
+   </div>
    </>
     )
   }
@@ -156,6 +185,7 @@ X-fer enables data from 3rd party MIS to be imported, merging information from m
   function Messaging() {
     return (
       <>
+       <div className="feature-offer">
       <h2>Messaging</h2>
       <p>
 LearnerTrack internal communications system.
@@ -176,6 +206,7 @@ The Messaging modules combine the power of email and SMS messaging to make sure 
  <li> Automated SMS and email warnings to staff and learners when courses are cancelled, Bad Attendance, Enrolemnt information ect.</li>
  <li> A user interface for texting Ad hoc messages to individuals and groups</li>
 </ul>
+</div>
       </>
     )
   }
@@ -183,6 +214,7 @@ The Messaging modules combine the power of email and SMS messaging to make sure 
   function ILR() {
     return (
       <>
+       <div className="feature-offer">
       <h2>ILR</h2>
       <p> ILR manager.
 Comprehensive management for ILR data and XML files.</p>
@@ -192,6 +224,7 @@ Comprehensive management for ILR data and XML files.</p>
   <li>View individual ILR data entities</li>
   <li>download XML ILR files for subcontractors</li>
 </ul>
+</div>
       </>
     )
   }
@@ -199,6 +232,7 @@ Comprehensive management for ILR data and XML files.</p>
   function Finance() {
     return (
       <>
+       <div className="feature-offer">
       <h2>Finance</h2>
       <p>
         Financial tools for course fees, payments and cash flow.
@@ -212,6 +246,7 @@ Fees module provides you with basic financial management tools to track all the 
         <li>Creditor and debtor lists</li>
         <li>Comprehensive audit trails</li>
       </ul>
+      </div>
       </>
     )
   }
@@ -229,8 +264,9 @@ Fees module provides you with basic financial management tools to track all the 
           <header className="site-header" id='scrollHome'>
 
 
-            <img className="eyebrow" src="Pictures/logo.PNG" alt="Monterpoint Logo" />
+           
             <div className="navbar">
+               <img className="logo" src={Logo} alt="Monterpoint Logo" />
               <nav>
                 <ul className="nav-links">
                   <li className="nav-item" onClick={() => { scrollHome() }}><a href="#"> Home</a></li>
@@ -245,7 +281,7 @@ Fees module provides you with basic financial management tools to track all the 
         </div>
 
 
-        <img src="./Adult-education-class.jpg" alt="Adult Education Class" />
+       
         <div className="sub-banner" >
           <h1>LearnerTrack</h1>
           <h2> a verstatile, secure, cost-effective and reliable cloud based MIS</h2>
@@ -286,7 +322,9 @@ Fees module provides you with basic financial management tools to track all the 
               <div className="info-grid">
                 <div className="info-card">
 
-                  <NavLink to="/performance"> Performance Analysis
+                  <NavLink to="/performance" className="nav-item"> Performance Analysis
+                  <br></br>
+                <img  className="img-gauge" src={Gauge} alt="gauge" /> 
                     <p>Qualification Achievement Rates and demographic Analysis of your ILR
                       State of the art QAR, KPI and performance analysis.</p>
                   </NavLink >
@@ -295,7 +333,8 @@ Fees module provides you with basic financial management tools to track all the 
                 <div className="info-card">
                   <NavLink to="/quickenrol">
                     Quick Enrol
-                    <img src="./QuickEnrol.png" alt="Quick Enrol" />
+                    <br></br>
+                   <img  className="img-enrol"  src={QEIMG} alt="Enrol" /> 
                     <p>Quick Enrol is a suite of functionality that helps your organisation to manage all the course and enrolment information,
                       for both staff and public.</p>
                   </NavLink >
@@ -303,36 +342,48 @@ Fees module provides you with basic financial management tools to track all the 
                 <div className="info-card">
                   <NavLink to="/webenrol">
                     Webenrol
+                    <br></br>
+                    <img  className="img-webenrol"  src={WEBIMG} alt="web Enrol" /> 
                     <p>We are proud to offer a new version of our WebEnrol system, with more functionality and improved user experience.</p>
                   </NavLink >
                 </div>
                 <div className="info-card">
                   <NavLink to="/dataEntry">
                     Data-Entry
+                    <br></br>
+                    <img  className="img-dentry" src={Dentry} alt="data entry" /> 
                     <p>Data Entry is LearnerTrack's core set of user interfaces for adding, editing and reporting on data in all the key LearnerTrack data structures.</p>
                   </NavLink>
                 </div>
                 <div className="info-card">
                   <NavLink to="/xfer">
                     Xfer
+                    <br></br>
+                    <img  className="img-Xfer" src={Xfers} alt="Xfers" /> 
                     <p>X-fer enables data from 3rd party MIS to be imported, merging information from multiple subcontracted providers.</p>
                   </NavLink>
                 </div>
                 <div className="info-card">
                   <NavLink to="/messaging">
                     Messaging
+                    <br></br>
+                    <img  className="img-messaging" src={messaging} alt="messaging" /> 
                     <p>Messaging is a LearnerTrack module that enables you to send messages to learners with ease</p>
                   </NavLink>
                 </div>
                 <div className="info-card">
                   <NavLink to="/ilr">
                     ILR
+                     <br></br>
+                    <img  className="img-folder" src={folder} alt="folder" /> 
                     <p>Comprehensive management for ILR data and XML files.</p>
                   </NavLink>
                 </div>
                 <div className="info-card">
                   <NavLink to="/finance">
                     Finance
+                    <br></br>
+                    <img  className="img-investment" src={investment} alt="investment" /> 
                     <p>Financial tools for course fees, payments and cash flow</p>
                   </NavLink>
                 </div>
@@ -351,7 +402,7 @@ Fees module provides you with basic financial management tools to track all the 
           </BrowserRouter>
 
 
-
+          <div className="aboutSection">
           <h1 className="header-color" id="scrollAbout">About Monterpoint Technologies</h1>
           <p><strong>Who are we?</strong> We are a web company dedicated to supporting DfE funded learning providers. Our team has been securely hosting local
             authority MI systems for over 20 years. We are determined to bring you support, security and influence over ongoing projects
@@ -360,7 +411,7 @@ Fees module provides you with basic financial management tools to track all the 
             LearnerTrack is hosted in a secure, state-of-the-art facility in UK via a diverse-routed resilient multi-Gbps Internet connection.
             LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private.
             The product also provides tools and monitoring to help customers implement security with their teams. </p>
-
+            </div>
           <button className="security-button" onClick={ShowSecurity}> See Specs</button>
           {isVisible &&
             <><div>

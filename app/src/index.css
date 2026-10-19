@@ -14,6 +14,12 @@
   box-sizing: border-box;
 }
 
+.logo{
+  height: 30%;
+  width: 30%;
+}
+
+
 .header-color {
   color: var(--colormain);
 }
@@ -97,21 +103,21 @@ main {
  
 }
 
-.eyebrow {
-  margin: 0 0 0.5rem;
-  color: var(--accent-dark);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
+
 
 .sub-banner {
-  padding-top: 1rem;
-background-image: linear-gradient(to right,  rgb(45, 121, 207), rgba(73, 85, 255, 0.541));
-  color: var(--surface);
-  padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 20rem;
+    color: var(--surface);
+    padding: 2rem;
+    background-image: linear-gradient(to right,  rgb(45, 121, 207), rgba(73, 85, 255, 0.0))
+    , url("./Pictures/Adult-education-class.jpg");
+    background-size: cover;
+
 }
+
+
 
 .section-heading {
   display: flex;
@@ -150,6 +156,66 @@ ul.feature-list li {
  ul.feature-list li:before {
  
   content:"\2714\0020"; 
+}
+
+/*images*/
+
+.perfomimg{
+   padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.quickEnrol{
+  padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.webenrolimg{
+  padding-top: 1rem;
+height: 40%;
+width: 40%;
+
+}
+
+.img-gauge{
+  padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.img-enrol{
+  padding: 0.25rem;
+height: 35%;
+width: 45%;
+}
+.img-webenrol{
+  padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.img-dentry{
+  padding-top: 1rem;
+height: 35%;
+width: 40%;
+}
+.img-Xfer{
+  padding-top: 1rem;
+height: 30%;
+width: 40%;
+}
+.img-messaging{
+    padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.img-folder{
+      padding-top: 1rem;
+height: 40%;
+width: 40%;
+}
+.img-investment{
+   padding-top: 1rem;
+height: 40%;
+width: 40%;
 }
 
  .info-grid-title {
@@ -223,6 +289,10 @@ font-weight: bold;
   border-radius: 0.25rem;
 }
 
+.aboutSection{
+  padding: 2rem;
+}
+
 .feature-offer{
 color:#004880;
   background-color: #f1f1f1;
@@ -232,6 +302,9 @@ color:#004880;
 
 }
 
+.feature-offer p, li {
+  color:#000000;
+}
 
 .feature-color  {
     color:#000000;
@@ -256,7 +329,7 @@ color:#004880;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   border-top: 1px solid var(--border);
   color: var(--surface);
-background: linear-gradient(90deg,rgb(40, 86, 122) 0%, rgba(52, 133, 196, 1) 50%, rgba(40, 86, 122, 1) 100%);
+background: linear-gradient(90deg,rgb(40, 86, 122) 0%, rgba(52, 133, 196, 1) 25%, rgba(40, 86, 122, 1) 100%);
 padding: 1rem;
 justify-content: flex-start;
     flex-wrap: wrap;
