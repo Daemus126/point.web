@@ -2,10 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import Footer from './Compnents/Footer.jsx'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import Logo from './Pictures/logo.PNG'
+import Logo from './Pictures/Monterpoint_logo.jpg'
+import LTlogo from './Pictures/LTLogo.gif'
 import Gauge from './Pictures/gauge-chart.png'
 import QEIMG from './Pictures/QEIMG.png'
 import WEBIMG from './Pictures/enroll.png'
+import Attendance from './Pictures/Attendance.jpg'
 import Dentry from './Pictures/Dentry.png'
 import Xfers from './Pictures/Xfers.png'
 import messaging from './Pictures/messaging.png'
@@ -14,17 +16,17 @@ import investment from './Pictures/investment.png'
 import performaceAnalysis from './Pictures/performanceAnalysis.jpg'
 import quickEnrol from './Pictures/quickenrol.jpg'
 import webenrol from './Pictures/webenrol.jpg'
-import webenroltwo from './Pictures/webenroltwo.jpg'
 import dentryimg from './Pictures/dentryimg.jpg'
-import securityimg from './Pictures/securityimg.png'
 import cyberessencial from './Pictures/cyberessencial.png'
 import interconection from './Pictures/interconection.png'
-import AdultEducationClass from './Pictures/Adult-education-class.jpg'
+import WSmycourses from './Pictures/westsussexmycourses.JPG'
+import Fis from './Pictures/FIS.JPG'
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [isWebenrolVisible, setIsWebenrolVisisble] = useState(false)
 
   function scrollHome() {
     document.getElementById('scrollHome').scrollIntoView({
@@ -62,13 +64,37 @@ function App() {
     console.log("clcikScroll")
   };
 
+  function scrollwebenrol() {
+    document.getElementById('scrollwebenrol').scrollIntoView({
+      behavior: 'smooth'
+    });
+    console.log("clcikScroll")
+  };
+
+  function scrollfooter() {
+    document.getElementById('scrollwebenrol').scrollIntoView({
+      behavior: 'smooth'
+    });
+    console.log("clcikScroll")
+  };
+
+  function scrollUnder(){
+     document.getElementById('scrollUnder').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 
   function ShowSecurity() {
     setIsVisible(!isVisible)
     console.log("isVisible", isVisible)
   }
 
+  function ShowWebenrol() {
+    setIsWebenrolVisisble(!isWebenrolVisible)
+  }
+
   function Performance() {
+   
     return (
       <>
         <div className="feature-offer">
@@ -119,29 +145,22 @@ function App() {
 
 
 
-  function WebEnrol() {
+  function RollCall() {
     return (
       <>
         <div className="feature-offer">
-          <h2>Web Enrolment</h2>
-          <p> Online Prospectus and public enrolment system.
-            Web.Enrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
-            Fully synchronised with your MIS, the public can make enquiries and enrol in a live environment.
-            Our Web.Enrol product is certified to the prestigious PCIDSS security standards introduced by Visa and MasterCard to ensure cardholders details are securely protected.</p>
-          <ul>
-            <li> Public web site automatically generated from your live MIS data</li>
-            <li>Comprehensive keyword and text search facility</li>
-            <li>Search by course category, location and time/day</li>
-            <li>Feeds web based enquiries directly into your MIS</li>
-            <li>View availability of places, live from MIS data</li>
-            <li>Highest standards for Access by those with disabilities</li>
-            <li>No site maintenance - automatically published from your MIS data</li>
-            <li>Design templates for easy integration with your own web site </li>
-            <li>We are working towards a fully documented API for developers and designers</li>
-            <li>Bespoke design and integration service also available</li>
-          </ul>
-          <img className='webenrolimg' src={webenrol} alt="webenrol" />
-          <img className='webenrolimg' src={webenroltwo} alt="webenrol" />
+          <h2>RollCall</h2>
+<p>RollCall records individual learner attendances via web registers. Ideal for both administrators and tutors, RollCall helps automate the recording 
+of ILR completions and withdrawals from register data, streamlining this process and highlighting both attendance and ILR audit issues.</p>
+<ul>
+<li>Tracks attendance simply and effectively</li>
+<li>User-friendly register view and update</li>
+<li>Automates and validates ILR completions and withdrawals process</li>
+<li>Alerting of badly attended courses etc.</li>
+<li>Printed registers</li>
+</ul>
+<img src={Attendance}></img>
+       
         </div>
       </>
     )
@@ -161,7 +180,7 @@ function App() {
             <li>Integrated lookups for LARA Learning Aims, Royal Mail Postcode data</li>
             <li>Instant DfE business rule validation</li>
           </ul>
-          <img className='webenrolimg' src={dentryimg} alt="dentryimg" />
+          <img className='denty' src={dentryimg} alt="dentryimg" />
         </div>
       </>
     )
@@ -226,7 +245,7 @@ function App() {
             <li>View individual ILR data entities</li>
             <li>download XML ILR files for subcontractors</li>
           </ul>
-          <img className='webenrolimg' src={dentryimg} alt="busnessrules" />
+          <img className='FIS' src={Fis} alt="buisness rules" />
         </div>
       </>
     )
@@ -277,6 +296,8 @@ function App() {
                   <li className="nav-item" onClick={() => { scrollAbout() }}><a href="#">About Us</a></li>
                   <li className="nav-item" onClick={() => { scrollSupport() }}><a href="#">Support</a></li>
                   <li className="nav-item" onClick={() => { scrollService() }}><a href="#">Service</a></li>
+                  <li className="nav-item" onClick={() => { scrollwebenrol() }}><a href="#">Webenrol</a></li>
+                  <li className="nav-item" onClick={() => { scrollfooter() }}><a href="#">Contact us</a></li>
                 </ul>
               </nav>
             </div>
@@ -294,37 +315,43 @@ function App() {
 
 
         <main>
-          <div className="Section-Header">
-            <h1 className="header-color">What We offer</h1>
+          <div className='center-items'>
+            <div className="Section-Header">
 
-            <ul className="feature-list">
-              <li >  25 Years of uninterrupted Service </li>
-              <li > A Cloudbased system with zero maintenance overheads </li>
-              <li > Secure access from anywhere</li>
-              <li > Ideal for subcrontracting with QAR based performance reporting</li>
-              <li > Personal Dashboards and self-enrolment for learners online</li>
-              <li> Unlimited Users</li>
-
-            </ul>
-            <h2 className="header-color">A cloud-based MIS for local authorities</h2>
-            <p><strong>LearnerTrack</strong> is a feature rich, cost-effective MIS for local authority adult education services. Designed
-              from the start as a cloud based solution, it supports all DfE funding streams.Whether you are an
-              administrator, educator, or learner, LearnerTrack
-              provides the tools you need to
-              manage your educational environment effectively. Explore our features and see how LearnerTrack can
-              benefit your institution.
-
-            </p>
-
-          </div>
-
-          <h3 className="info-grid-title" id='scrollLearnerTrack'>Key Features:</h3>
+              <img className='Ltlogo' src={LTlogo} alt="learnerTrack logo" />
+              <h2 className="header-color">A cloud-based MIS for local authorities</h2>
+              <p><strong>LearnerTrack</strong> is a feature rich, cost-effective MIS for local authority adult education services. Designed
+                from the start as a cloud based solution, it supports all DfE funding streams.Whether you are an
+                administrator, educator, or learner, LearnerTrack
+                provides the tools you need to
+                manage your educational environment effectively. Explore our features and see how LearnerTrack can
+                benefit your institution.
+              </p>
 
 
-          <BrowserRouter>
-            <nav>
-              <div className="info-grid">
-                  <div className="info-card">
+              <h1 className="header-color">What We offer</h1>
+
+              <ul className="feature-list">
+                <li >  25 Years of uninterrupted Service </li>
+                <li > A Cloudbased system with zero maintenance overheads </li>
+                <li > Secure access from anywhere</li>
+                <li > Ideal for subcrontracting with QAR based performance reporting</li>
+                <li > Personal Dashboards and self-enrolment for learners online</li>
+                <li> Unlimited Users</li>
+
+              </ul>
+
+
+            </div>
+
+
+            <h3 className="info-grid-title" id='scrollLearnerTrack'>Key Features:</h3>
+
+
+            <BrowserRouter>
+              <nav>
+                <div className="info-grid">
+                  <div className="info-card" onClick={scrollUnder}>
                     <img className="img-gauge" src={Gauge} alt="gauge" />
                     <NavLink to="/performance" className="nav-item">
                       <h3>Performance Analysis</h3>
@@ -332,259 +359,316 @@ function App() {
                     </NavLink >
                   </div>
 
-                  <div className="info-card">
+                  <div className="info-card" onClick={scrollUnder}>
                     <img className="img-enrol" src={QEIMG} alt="Enrol" />
-
                     <NavLink to="/quickenrol">
                       <h3> Quick Enrol</h3>
                       <p>Manage all the course and enrolment information in one place</p>
                     </NavLink >
                   </div>
-                  <div className="info-card">
-                    <img className="img-webenrol" src={WEBIMG} alt="web Enrol" />
 
-                    <NavLink to="/webenrol">
-                      <h3>Webenrol</h3>
-                      <p>Enquiry, application and enrolment portal</p>
+                  <div className="info-card" onClick={scrollUnder}>
+                    <img className="img-webenrol" src={WEBIMG} alt="web Enrol" />
+                    <NavLink to="/RollCall">
+                      <h3>RollCall</h3>
+                      <p>Online class register and attendance monitoring</p>
                     </NavLink >
                   </div>
-                  <div className="info-card">
-                    <img className="img-dentry" src={Dentry} alt="data entry" />
 
+                  <div className="info-card" onClick={scrollUnder}>
+                    <img className="img-dentry" src={Dentry} alt="data entry" />
                     <NavLink to="/dataEntry">
                       <h3>Data-Entry</h3>
                       <p>Control over all your data</p>
                     </NavLink>
                   </div>
-                  <div className="info-card">
-                    <img className="img-Xfer" src={Xfers} alt="Xfers" />
 
+                  <div className="info-card" onClick={scrollUnder}>
+                    <img className="img-Xfer" src={Xfers} alt="Xfers" />
                     <NavLink to="/xfer">
                       <h3>Xfer</h3>
                       <p>Enables data from 3rd party MIS to be imported, perfect for subcontacter merging</p>
                     </NavLink>
                   </div>
-                  <div className="info-card">
 
+                  <div className="info-card" onClick={scrollUnder}>
                     <img className="img-messaging" src={messaging} alt="messaging" />
-
                     <NavLink to="/messaging">
                       <h3>Messaging</h3>
                       <p>Send messages to learners with ease</p>
                     </NavLink>
                   </div>
-                  <div className="info-card">
-                    <img className="img-folder" src={folder} alt="folder" />
 
+                  <div className="info-card" onClick={scrollUnder}>
+                    <img className="img-folder" src={folder} alt="folder" />
                     <NavLink to="/ilr">
                       <h3>ILR</h3>
                       <p>Data quality is central to LearnerTrack</p>
                     </NavLink>
                   </div>
-                  <div className="info-card">
-                    <img className="img-investment" src={investment} alt="investment" />
 
+                  <div className="info-card" onClick={scrollUnder}>
+                    <img className="img-investment" src={investment} alt="investment" />
                     <NavLink to="/finance">
                       <h3>Finance</h3>
                       <p>Financial tools for course fees, payments and cash flow</p>
                     </NavLink>
+
+                   <div id="scrollUnder"></div>
                   </div>
                 </div>
-              
-            </nav>
-            <Routes>
-              <Route path="/performance" element={<Performance />} />
-              <Route path="/quickenrol" element={<QuickEnrol />} />
-              <Route path="/webenrol" element={<WebEnrol />} />
-              <Route path="/dataEntry" element={<DataEntry />} />
-              <Route path="/xfer" element={<Xfer />} />
-              <Route path="/messaging" element={<Messaging />} />
-              <Route path="/ilr" element={<ILR />} />
-              <Route path="/finance" element={<Finance />} />
-            </Routes>
-          </BrowserRouter>
 
+
+              </nav>
+              <Routes>
+                <Route path="/performance" element={<Performance />} />
+                <Route path="/quickenrol" element={<QuickEnrol />} />
+                <Route path="/RollCall" element={<RollCall />} />
+                <Route path="/dataEntry" element={<DataEntry />} />
+                <Route path="/xfer" element={<Xfer />} />
+                <Route path="/messaging" element={<Messaging />} />
+                <Route path="/ilr" element={<ILR />} />
+                <Route path="/finance" element={<Finance />} />
+              </Routes>
+            </BrowserRouter>
+             
+          </div>
+         
+<div id="scrollUnder"></div>
 
           <div className='pageDivideDiv'>
             <div className="pageDivide">
-              <p className='pagedivtext'>
-                "The inexorable, gravitational pull
-                of remote working practices and
-                online learning
-                has made us all more
-                connected than ever."
-              </p>
-              <p>Over two decades learnerTrack MIS has built interconnectivity to facillitate remote partnership working.
-                You can give access to your centralised systems to partner providers, each having strictly controlled
-                access to their own data and reporting. A network of web services manage connections to DfE, LRS,
-                Google Classroom, BKSB, payment card services, Royal Mail addressing, email verification systems and SMS
-                messaging via GOV.UK Notify.</p>
+              <div className='center-items'>
+                <p className='pagedivtext'>
+                  "The inexorable, gravitational pull
+                  of remote working practices and
+                  online learning
+                  has made us all more
+                  connected than ever."
+                </p>
+                <p>Over two decades learnerTrack MIS has built interconnectivity to facillitate remote partnership working.
+                  You can give access to your centralised systems to partner providers, each having strictly controlled
+                  access to their own data and reporting. A network of web services manage connections to DfE, LRS,
+                  Google Classroom, BKSB, payment card services, Royal Mail addressing, email verification systems and SMS
+                  messaging via GOV.UK Notify.</p>
+              </div>
             </div>
-            <img className='interconectiviity' src={interconection} alt="Interconectiviity" />
+            <div className='interconectiviityBanner'>
+              <div className='center-items'>
+                <img className='interconectiviity' src={interconection} alt="Interconectiviity" />
+              </div>
+            </div>
           </div>
 
+          <div className='center-items'>
+            <div className="aboutSection">
+              <h1 className="header-color" id="scrollAbout">About Monterpoint Technologies</h1>
+              <p>Monterpoint Technologies is one of the UK’s
+                largest providers of DfE/ILR oriented software
+                as a service (SASS) with over 20 local authority
+                customers and over 1,000 active users. Our
+                flagship product, LearnerTrack, was the first pure
+                web based DfE MIS in the UK and we have been
+                building on it’s features and capability for 20 years. </p>
+              <p>
+                Monterpoint Technologies as an organisation
+                specialises exclusively in the support and
+                maintenance of LearnerTrack MIS and so all of
+                our creative energy is focused on improving
+                and building on it’s features.
+                By continually investing in our people,
+                partnerships and technologies, we have
+                continually evolved LearnerTrack to meet
+                the ever increasing demands for online adult
+                education services and the changing needs
+                of our customers. Our Cloud-first strategy
+                is enabling our customers to realise cost
+                efficiencies and meet the challenges of
+                delivering online education services head on.
+              </p>
+              <p>
+                Our feature development priorities are wholly
+                set by our active usergroup of Local Authority
+                adult education services and we continually
+                strive to improve the service through regular
+                communication with our customers.
+              </p>
+              <p><strong>Technology and Security: </strong>
+                LearnerTrack is hosted in a secure, state-of-the-art facility in UK via a diverse-routed resilient multi-Gbps Internet connection.
+                LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private.
+                The product also provides tools and monitoring to help customers implement security with their teams. </p>
 
-          <div className="aboutSection">
-            <h1 className="header-color" id="scrollAbout">About Monterpoint Technologies</h1>
-            <p>Monterpoint Technologies is one of the UK’s
-              largest providers of DfE/ILR oriented software
-              as a service (SASS) with over 20 local authority
-              customers and over 1,000 active users. Our
-              flagship product, LearnerTrack, was the first pure
-              web based ESFA MIS in the UK and we have been
-              building on it’s features and capability for 20 years. </p>
-            <p>
-              Monterpoint Technologies as an organisation
-              specialises exclusively in the support and
-              maintenance of LearnerTrack MIS and so all of
-              our creative energy is focused on improving
-              and building on it’s features.
-              By continually investing in our people,
-              partnerships and technologies, we have
-              continually evolved LearnerTrack to meet
-              the ever increasing demands for online adult
-              education services and the changing needs
-              of our customers. Our Cloud-first strategy
-              is enabling our customers to realise cost
-              efficiencies and meet the challenges of
-              delivering online education services head on.
-            </p>
-            <p>
-              Our feature development priorities are wholly
-              set by our active usergroup of Local Authority
-              adult education services and we continually
-              strive to improve the service through regular
-              communication with our customers.
-            </p>
-            <p><strong>Technology and Security: </strong>
-              LearnerTrack is hosted in a secure, state-of-the-art facility in UK via a diverse-routed resilient multi-Gbps Internet connection.
-              LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private.
-              The product also provides tools and monitoring to help customers implement security with their teams. </p>
+              <button className="security-button" onClick={ShowSecurity}> See Specs</button>
+              {isVisible &&
+                <><div>
+                  <h2>Technology</h2>
+                  <p>LearnerTrack is hosted in a secure dedicated server farm connected to a super-fast secure network.</p>
+
+                  <h3>Hosting Environment</h3>
+                  <ul>
+                    <li>Prime Tier III UK data centre location</li>
+                    <li>ISO 27001 accreditation for IT security</li>
+                    <li>Diverse N+1 power supply</li>
+                    <li>On-site diesel generators</li>
+                    <li>24/7 on-site security and support</li>
+                    <li>48+ cameras with 90 day minimum recordings</li>
+                    <li>Multiple redundant cooling systems</li>
+                    <li>Multiple diverse network connections</li>
+                  </ul>
+                  <h2>Security Specifications</h2>
+                  <p>
+                    LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private. The product also provides tools and monitoring to help customers implement security with their teams.
+                  </p>
+                  <h3>Physical Security</h3>
+                  <p>
+                    Security personnel guard the co-location sites 24 hours a day seven days a week. In addition intruder detection systems, CCTV, and card access systems control access both internally and externally.
+                  </p>
+                  <h3>Access Provision</h3>
+                  <p>
+                    The precise location of our physically secure hosting site is kept confidential. Access to the LearnerTrack Servers is limited to authorized Monterpoint engineers, by special arrangement once a thorough identity confirmation procedure has been passed.
+                  </p>
+                  <h3>Power Supply</h3>
+                  <p>
+                    The electrical supply to both remote access and power management devices, and hence to the LearnerTrack Servers is via an uninterruptible power supply (UPS), it will continue to run in the event of an external power supply failure with no disruption to the LearnerTrack Service.
+                  </p>
+                  <h3>Environment</h3>
+                  <p>
+                    A constant ambient temperature of 22° Celsius (plus/minus 2° Celsius) and a relative humidity of 30% to 70% are maintained.
+                  </p>
+                  <h3>Fire Detection and Prevention</h3>
+                  <p>
+                    The fire detection system will provide the earliest possible warning and covers all areas, including under false floors.
+                  </p>
+                  <h3>Back-up/Restore and Disaster Recovery</h3>
+                  <ul>
+                    <li>Daily Back-up of Entire Database</li>
+                    <li>Daily back-ups rotated on weekly cycle</li>
+                    <li>Weekly Back-up of Entire Database</li>
+                    <li>Full Data roll back to any point during the previous 2 months</li>
+                  </ul>
+
+
+                </div></>
+              }
+            </div>
+            <div className="feature-offer">
+
+              <h2 > What makes us different from other suppliers?</h2>
+              <ul className="feature-list">
+                <li> Three development cycles per year, that are shaped by you. </li>
+                <li> Round the clock support, including non-AI live chat support. </li>
+                <li> Completely accessible from anywhere, our whole system can be accessed through a web browser,
+                  meaning no installations on your end. </li>
+                <li> Minimal IT expertise needed.</li>
+              </ul>
+
+
+
+
+              <h3 >Development</h3>
+              <p className="feature-color"> We always endover to bring you a growing and improved platform that fits your needs. We take request for changes throughut the year running three devlopment cycles.
+                that are shaped by you and other councils. We run usergroup meetings and votes to shape our deployments and next steps. Recent changes include new progession measures, deeper analysis options and further work on Webenrol.
+                You input is impoptant as it is use our system and we want to make sure it is the best it can be for you.
+              </p>
+
+
+              <h3 >Minimal IT expertise needed</h3>
+              <p className="feature-color">  Anyone can use LearnerTrack, we endeavour to make LeanerTrack as user friendly as possible so that anyone is able to use our system.
+                We offer free training sessions for SuperUsers, training sessions can be organised at any time and on any particular topic that
+                you need more guidnace on.
+              </p>
+
+              <h3 id='scrollSupport'>Support </h3>
+              <p className="feature-color"><strong>Our Support</strong> is free and provided to all LearnerTrack named Superusers within working hours.
+                As well as the comprehensive online, context sensitive user guide, our dedicated support team monitors incoming e-mails,
+                providing a rapid response service offering on-the-spot guidance and support and tracking progress of more complex queries.
+                We also provide a a live chat system where you will be matched with
+                one of our support team members to help you with your query. Along side this we host a forum to connect you with other local authorities for support, adivse and connection.
+              </p>
+
+              <p className="feature-color"><strong>Training World</strong> Complete replication of your entire system for Training purposes.
+                Training World is a complete replication of your entire LearnerTrack system that you can use for training and other scenarios where you want to 'play' with
+                the system without worrying about making accidental changes in your live data. We maintain and support your training system at the same level as your live database
+                so it is always available to you.
+              </p>
+
+            </div>
+
+
+
+            <div className="service-section" id='scrollService'>
+              <h2>Services</h2>
+              <p>
+                LearnerTrack in-house staff are available for all your outsourced data entry requirements. We can provide professional assessments and planning to help you manage your information and data processes.
+                Localise your LearnerTrack system to meet your individual business requirements, off the shelf and bespoke training and bespoke Development projects.
+              </p>
+
+              <h3>Bureau</h3>
+              <p>LearnerTrack Data Entry Bureau.
+
+                LearnerTrack in-house staff are available for all your outsourced data entry requirements. Courses, learners and enrolments can all be processed via our efficient and cost-effective bureau service,</p>
+
+              <h3>Consultancy</h3>
+              <p>We can provide professional assessments and planning to help you manage your information and data processes.
+
+                The Monterpoint support team have a wide range of hands-on experience working within the SFA funded sector as well as a detailed working knowledge of LearnerTrack software. We can provide you with guidance and planning to help you manage your information and data processes as well as clear, professional advice and support on a range of operational detail.</p>
+
+              <h3>Training</h3>
+              <p>Off the shelf and bespoke training.
+
+                LearnerTrack Training packages are available to support all your key operational staff. Our experienced support team will help your people to get the best from LearnerTrack, each according to their individual job related needs. We can arrange bespoke in-house training packages, particularly suited to initial system implementation. There are also open-house workshops advertised to the network during the year, held in convenient locations. Whatever your LearnerTrack training needs, our team can work with you to meet them.</p>
+
+              <h3>Bespoke Development projects.</h3>
+              <p>Bespoke development can be purchased from Monterpoint at any time in the yearly cycle. Our design and development team can work with you on both LearnerTrack development projects and standalone software development. Quotations and delivery schedules are available on a case by case basis.</p>
+
+            </div>
           </div>
-          <button className="security-button" onClick={ShowSecurity}> See Specs</button>
-          {isVisible &&
-            <><div>
-              <h2>Technology</h2>
-              <p>LearnerTrack is hosted in a secure dedicated server farm connected to a super-fast secure network.</p>
 
-              <h3>Hosting Environment</h3>
-              <ul>
-                <li>Prime Tier III UK data centre location</li>
-                <li>ISO 27001 accreditation for IT security</li>
-                <li>Diverse N+1 power supply</li>
-                <li>On-site diesel generators</li>
-                <li>24/7 on-site security and support</li>
-                <li>48+ cameras with 90 day minimum recordings</li>
-                <li>Multiple redundant cooling systems</li>
-                <li>Multiple diverse network connections</li>
-              </ul>
-              <h2>Security Specifications</h2>
-              <p>
-                LearnerTrack and its data is secured against physical and digital attacks. Your customers data and information is safe and private. The product also provides tools and monitoring to help customers implement security with their teams.
-              </p>
-              <h3>Physical Security</h3>
-              <p>
-                Security personnel guard the co-location sites 24 hours a day seven days a week. In addition intruder detection systems, CCTV, and card access systems control access both internally and externally.
-              </p>
-              <h3>Access Provision</h3>
-              <p>
-                The precise location of our physically secure hosting site is kept confidential. Access to the LearnerTrack Servers is limited to authorized Monterpoint engineers, by special arrangement once a thorough identity confirmation procedure has been passed.
-              </p>
-              <h3>Power Supply</h3>
-              <p>
-                The electrical supply to both remote access and power management devices, and hence to the LearnerTrack Servers is via an uninterruptible power supply (UPS), it will continue to run in the event of an external power supply failure with no disruption to the LearnerTrack Service.
-              </p>
-              <h3>Environment</h3>
-              <p>
-                A constant ambient temperature of 22° Celsius (plus/minus 2° Celsius) and a relative humidity of 30% to 70% are maintained.
-              </p>
-              <h3>Fire Detection and Prevention</h3>
-              <p>
-                The fire detection system will provide the earliest possible warning and covers all areas, including under false floors.
-              </p>
-              <h3>Back-up/Restore and Disaster Recovery</h3>
-              <ul>
-                <li>Daily Back-up of Entire Database</li>
-                <li>Daily back-ups rotated on weekly cycle</li>
-                <li>Weekly Back-up of Entire Database</li>
-                <li>Full Data roll back to any point during the previous 2 months</li>
-              </ul>
+          <div className="webenrol" id='scrollwebenrol'>
+            <div className="webenrolcard">
+              <div className='webenroltext'>
+                <h1> Webenrol V2</h1>
+                <h2> We are proudly launching our new webenrol system that gives you more flexibility and greater support for your learners</h2>
+                <p> Our new version of webenrol goes above and beyond to bring you all the functionality you need to make your Users have a peaceful and informative
+                  experince. With new personal dashboards to store course information, personal calanders and Target setting functionality, you users will have acess to
+                  all the information they need to support their learning.
+                </p>
+                <button className="seemore" onClick={ShowWebenrol}> See More </button>
+              </div>
 
-
-            </div></>
+            </div>
+            <div className="webenrolcard">
+              <img className='webenrolimg' src={webenrol} alt="webenrol" />
+            </div>
+          </div>
+          {isWebenrolVisible &&
+            <div className="webenrolfeatures">
+              <div className="webenrolfeaturescard">
+                <div className='webenroltext'>
+                <h1>More For you</h1>
+                <h3> 
+                  WebEnrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
+                  Fully synchronised with your MIS, Learners can enrol, see upcoming courses and manage their classes with a personalised dashboard.</h3>
+                <ul>
+                  <li> Public web site automatically generated from your live MIS data</li>
+                  <li>Connection to learners tools like, google classroom and BKSB</li>
+                   <li>Personalised calenders and Course Information</li>
+                    <li>Both Sitewide and individual alert systems</li>
+                  <li>Feeds web based enquiries directly into your MIS</li>
+                   <li>Documents center for ILP's, LAGS and eligibility information</li>
+                  <li>Highest standards for Access by those with disabilities</li>
+                  <li>No site maintenance - automatically published from your MIS data</li>
+                  <li>Design templates for easy integration with your own web site </li>
+                  <li>Bespoke design and integration service also available</li>
+                  <li>Certified to the PCIDSS security standards introduced by Visa and MasterCard to ensure cardholders details are securely protected </li>
+                </ul>
+                </div>
+              </div>
+              <div className="webenrolfeaturescard">
+                <img className='WSmycourses' src={WSmycourses} alt="My-courses section" />
+              </div>
+            </div>
           }
-
-          <div className="feature-offer">
-
-            <h2 > What makes us different from other suppliers?</h2>
-            <ul className="feature-list">
-              <li> Three development cycles per year, that are shaped by you. </li>
-              <li> Round the clock support, including non-AI live chat support. </li>
-              <li> Completely accessible from anywhere, our whole system can be accessed through a web browser,
-                meaning no installations on your end. </li>
-              <li> Minimal IT expertise needed.</li>
-            </ul>
-
-
-
-
-            <h3 >Development</h3>
-            <p className="feature-color"> We always endover to bring you a growing and improved platform that fits your needs. We take request for changes throughut the year running three devlopment cycles.
-              that are shaped by you and other councils. We run usergroup meetings and votes to shape our deployments and next steps. Recent changes include new progession measures, deeper analysis options and further work on Webenrol.
-              You input is impoptant as it is use our system and we want to make sure it is the best it can be for you.
-            </p>
-
-
-            <h3 >Minimal IT expertise needed</h3>
-            <p className="feature-color">  Anyone can use LearnerTrack, we endeavour to make LeanerTrack as user friendly as possible so that anyone is able to use our system.
-              We offer free training sessions for SuperUsers, training sessions can be organised at any time and on any particular topic that
-              you need more guidnace on.
-            </p>
-
-            <h3 id='scrollSupport'>Support </h3>
-            <p className="feature-color"><strong>Our Support</strong> is free and provided to all LearnerTrack named Superusers within working hours.
-              As well as the comprehensive online, context sensitive user guide, our dedicated support team monitors incoming e-mails,
-              providing a rapid response service offering on-the-spot guidance and support and tracking progress of more complex queries.
-              We also provide a a live chat system where you will be matched with
-              one of our support team members to help you with your query. Along side this we host a forum to connect you with other local authorities for support, adivse and connection.
-            </p>
-
-            <p className="feature-color"><strong>Training World</strong> Complete replication of your entire system for Training purposes.
-              Training World is a complete replication of your entire LearnerTrack system that you can use for training and other scenarios where you want to 'play' with
-              the system without worrying about making accidental changes in your live data. We maintain and support your training system at the same level as your live database
-              so it is always available to you.
-            </p>
-
-          </div>
-
-
-
-          <div className="service-section" id='scrollService'>
-            <h2>Services</h2>
-            <p>
-              LearnerTrack in-house staff are available for all your outsourced data entry requirements. We can provide professional assessments and planning to help you manage your information and data processes.
-              Localise your LearnerTrack system to meet your individual business requirements, off the shelf and bespoke training and bespoke Development projects.
-            </p>
-
-            <h3>Bureau</h3>
-            <p>LearnerTrack Data Entry Bureau.
-
-              LearnerTrack in-house staff are available for all your outsourced data entry requirements. Courses, learners and enrolments can all be processed via our efficient and cost-effective bureau service,</p>
-
-            <h3>Consultancy</h3>
-            <p>We can provide professional assessments and planning to help you manage your information and data processes.
-
-              The Monterpoint support team have a wide range of hands-on experience working within the SFA funded sector as well as a detailed working knowledge of LearnerTrack software. We can provide you with guidance and planning to help you manage your information and data processes as well as clear, professional advice and support on a range of operational detail.</p>
-
-            <h3>Training</h3>
-            <p>Off the shelf and bespoke training.
-
-              LearnerTrack Training packages are available to support all your key operational staff. Our experienced support team will help your people to get the best from LearnerTrack, each according to their individual job related needs. We can arrange bespoke in-house training packages, particularly suited to initial system implementation. There are also open-house workshops advertised to the network during the year, held in convenient locations. Whatever your LearnerTrack training needs, our team can work with you to meet them.</p>
-
-            <h3>Bespoke Development projects.</h3>
-            <p>Bespoke development can be purchased from Monterpoint at any time in the yearly cycle. Our design and development team can work with you on both LearnerTrack development projects and standalone software development. Quotations and delivery schedules are available on a case by case basis.</p>
-
-          </div>
 
 
 
@@ -593,9 +677,8 @@ function App() {
 
       </body >
 
-      <div className='verify'>
+      <div className='verify' id='scrollfooter'>
         <h2> Verified By</h2>
-        <img className='securityimg' src={securityimg} alt="security liecence" />
         <img className='securityimg' src={cyberessencial} alt="security liecence" />
       </div>
       <Footer />

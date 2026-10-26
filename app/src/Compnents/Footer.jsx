@@ -16,9 +16,9 @@ function Footer() {
                 
             </div>
 
-            <subfooter className="subfooter">
+            <div className="subfooter">
                 <p> 2026 Monterpoint. All rights reserved.</p>
-            </subfooter>
+            </div>
 
 
         </>

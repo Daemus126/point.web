@@ -19,13 +19,17 @@
   width: 30%;
 }
 
+.center-items{
+  align-content: center;
+    width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
 
 .header-color {
   color: var(--colormain);
 }
 
 body {
-  align-items: center;
   margin: 0;
   font-family: open-sans, sans-serif;
   line-height: 1.5;
@@ -77,7 +81,6 @@ ul li .nav-links {
 }
 
 .site-header,
-main,
 footer {
   width: min(1100px, calc(100% - 2rem));
   margin: 0 auto;
@@ -97,19 +100,15 @@ footer {
 }
 
 
-main {
-  align-items: center;
- 
-}
 
 
 
 .sub-banner {
-    padding-top: 1rem;
+    padding-top: 3rem;
+    padding-left: 4rem;
     padding-bottom: 1rem;
     height: 20rem;
     color: var(--surface);
-    padding: 2rem;
     background-image: linear-gradient(to right,  rgb(45, 121, 207), rgba(73, 85, 255, 0.0))
     , url("./Pictures/Adult-education-class.jpg");
     background-size: cover;
@@ -161,6 +160,9 @@ ul.feature-list li {
 }
 
 /*images*/
+.Ltlogo{
+  padding-top: 2rem;
+}
 
 .perfomimg{
    padding-top: 1rem;
@@ -172,10 +174,12 @@ width: 40%;
 height: 40%;
 width: 40%;
 }
+.denty{
+  width: 50%;
+}
 .webenrolimg{
   padding-top: 1rem;
-height: 40%;
-width: 40%;
+padding-left: 2rem;
 }
 .securityimg{
 padding-top: 1rem;
@@ -196,7 +200,7 @@ width: 50%;
 }
 .img-webenrol{
   padding-top: 1rem;
-height: 30%;
+height: 40%;
 width: 35%;
 }
 .img-dentry{
@@ -279,9 +283,6 @@ width: 30%;
   font-size: 1rem;
 }
 
-.info-grid :hover {
-background-color: var(--accent-dark);
-}
 
 
 .p-info-grid {
@@ -320,8 +321,13 @@ text-align: left;
 
 }
 
+.interconectiviityBanner{
+padding: 1rem;
+background-color: #47AFEE;
+}
+
 .aboutSection{
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .feature-offer{
@@ -354,6 +360,49 @@ padding: 2rem;
 color:#004880;
 }
 
+.webenrol{
+     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 5rem;
+  background-color: #004880;
+  color: white;
+}
+.webenrolcard{
+   display: flex;
+  flex-direction: column;
+}
+
+.webenroltext{
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.seemore{
+  padding: 1rem;
+  background-color: var(--colormain);
+    color: white;
+    border: var(--colormain);
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+.webenrolfeatures{
+     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 5rem;
+  background-color: #35B4C4;
+  color: white;
+}
+
+.webenrolfeatures li{
+  color: white;
+}
+
+.webenrolfeaturescard{
+   display: flex;
+  flex-direction: column;
+}
 
 .footer {
    display: grid;
@@ -379,7 +428,9 @@ justify-content: flex-start;
  
 }
 
+
 .verify{
+  padding-top: 2rem;
   color: rgb(41, 39, 39);
   text-align: center;
 }
