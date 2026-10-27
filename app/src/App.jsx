@@ -72,14 +72,14 @@ function App() {
   };
 
   function scrollfooter() {
-    document.getElementById('scrollwebenrol').scrollIntoView({
+    document.getElementById('scrollfooter').scrollIntoView({
       behavior: 'smooth'
     });
     console.log("clcikScroll")
   };
 
-  function scrollUnder(){
-     document.getElementById('scrollUnder').scrollIntoView({
+  function scrollUnder() {
+    document.getElementById('scrollUnder').scrollIntoView({
       behavior: 'smooth'
     });
   }
@@ -94,7 +94,7 @@ function App() {
   }
 
   function Performance() {
-   
+
     return (
       <>
         <div className="feature-offer">
@@ -150,17 +150,17 @@ function App() {
       <>
         <div className="feature-offer">
           <h2>RollCall</h2>
-<p>RollCall records individual learner attendances via web registers. Ideal for both administrators and tutors, RollCall helps automate the recording 
-of ILR completions and withdrawals from register data, streamlining this process and highlighting both attendance and ILR audit issues.</p>
-<ul>
-<li>Tracks attendance simply and effectively</li>
-<li>User-friendly register view and update</li>
-<li>Automates and validates ILR completions and withdrawals process</li>
-<li>Alerting of badly attended courses etc.</li>
-<li>Printed registers</li>
-</ul>
-<img src={Attendance}></img>
-       
+          <p>RollCall records individual learner attendances via web registers. Ideal for both administrators and tutors, RollCall helps automate the recording
+            of ILR completions and withdrawals from register data, streamlining this process and highlighting both attendance and ILR audit issues.</p>
+          <ul>
+            <li>Tracks attendance simply and effectively</li>
+            <li>User-friendly register view and update</li>
+            <li>Automates and validates ILR completions and withdrawals process</li>
+            <li>Alerting of badly attended courses etc.</li>
+            <li>Printed registers</li>
+          </ul>
+          <img src={Attendance}></img>
+
         </div>
       </>
     )
@@ -293,10 +293,10 @@ of ILR completions and withdrawals from register data, streamlining this process
                 <ul className="nav-links">
                   <li className="nav-item" onClick={() => { scrollHome() }}><a href="#"> Home</a></li>
                   <li className="nav-item" onClick={() => { scrollLearnerTrack() }}><a href="#">LearnerTrack</a></li>
+                  <li className="nav-item" onClick={() => { scrollwebenrol() }}><a href="#">Webenrol</a></li>
                   <li className="nav-item" onClick={() => { scrollAbout() }}><a href="#">About Us</a></li>
                   <li className="nav-item" onClick={() => { scrollSupport() }}><a href="#">Support</a></li>
                   <li className="nav-item" onClick={() => { scrollService() }}><a href="#">Service</a></li>
-                  <li className="nav-item" onClick={() => { scrollwebenrol() }}><a href="#">Webenrol</a></li>
                   <li className="nav-item" onClick={() => { scrollfooter() }}><a href="#">Contact us</a></li>
                 </ul>
               </nav>
@@ -414,7 +414,7 @@ of ILR completions and withdrawals from register data, streamlining this process
                       <p>Financial tools for course fees, payments and cash flow</p>
                     </NavLink>
 
-                   <div id="scrollUnder"></div>
+                    <div id="scrollUnder"></div>
                   </div>
                 </div>
 
@@ -431,34 +431,60 @@ of ILR completions and withdrawals from register data, streamlining this process
                 <Route path="/finance" element={<Finance />} />
               </Routes>
             </BrowserRouter>
-             
-          </div>
-         
-<div id="scrollUnder"></div>
 
-          <div className='pageDivideDiv'>
-            <div className="pageDivide">
-              <div className='center-items'>
-                <p className='pagedivtext'>
-                  "The inexorable, gravitational pull
-                  of remote working practices and
-                  online learning
-                  has made us all more
-                  connected than ever."
+          </div>
+
+          <div id="scrollUnder"></div>
+
+          <div className="webenrol" id='scrollwebenrol'>
+            <div className="webenrolcard">
+              <div className='webenroltext'>
+                <h1> Webenrol V2</h1>
+                <h2> We are proudly launching our new webenrol system that gives you more flexibility and greater support for your learners</h2>
+                <p> Our new version of webenrol goes above and beyond to bring you all the functionality you need to make your Users have a peaceful and informative
+                  experince. With new personal dashboards to store course information, personal calanders and Target setting functionality, you users will have acess to
+                  all the information they need to support their learning.
                 </p>
-                <p>Over two decades learnerTrack MIS has built interconnectivity to facillitate remote partnership working.
-                  You can give access to your centralised systems to partner providers, each having strictly controlled
-                  access to their own data and reporting. A network of web services manage connections to DfE, LRS,
-                  Google Classroom, BKSB, payment card services, Royal Mail addressing, email verification systems and SMS
-                  messaging via GOV.UK Notify.</p>
+                <button className="seemore" onClick={ShowWebenrol}> See More </button>
               </div>
+
             </div>
-            <div className='interconectiviityBanner'>
-              <div className='center-items'>
-                <img className='interconectiviity' src={interconection} alt="Interconectiviity" />
-              </div>
+            <div className="webenrolcard">
+              <img className='webenrolimg' src={webenrol} alt="webenrol" />
             </div>
           </div>
+          {isWebenrolVisible &&
+            <div className="webenrolfeatures">
+              <div className="webenrolfeaturescard">
+                <div className='webenroltext'>
+                  <h1>More For you</h1>
+                  <h3>
+                    WebEnrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
+                    Fully synchronised with your MIS, Learners can enrol, see upcoming courses and manage their classes with a personalised dashboard.</h3>
+                  <ul>
+                    <li> Public web site automatically generated from your live MIS data</li>
+                    <li>Connection to learners tools like, google classroom and BKSB</li>
+                    <li>Personalised calenders and Course Information</li>
+                    <li>Both Sitewide and individual alert systems</li>
+                    <li>Feeds web based enquiries directly into your MIS</li>
+                    <li>Documents center for ILP's, LAGS and eligibility information</li>
+                    <li>Highest standards for Access by those with disabilities</li>
+                    <li>No site maintenance - automatically published from your MIS data</li>
+                    <li>Design templates for easy integration with your own web site </li>
+                    <li>Bespoke design and integration service also available</li>
+                    <li>Certified to the PCIDSS security standards introduced by Visa and MasterCard to ensure cardholders details are securely protected </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="webenrolfeaturescard">
+                <img className='WSmycourses' src={WSmycourses} alt="My-courses section" />
+              </div>
+            </div>
+          }
+
+
+
+
 
           <div className='center-items'>
             <div className="aboutSection">
@@ -624,52 +650,29 @@ of ILR completions and withdrawals from register data, streamlining this process
             </div>
           </div>
 
-          <div className="webenrol" id='scrollwebenrol'>
-            <div className="webenrolcard">
-              <div className='webenroltext'>
-                <h1> Webenrol V2</h1>
-                <h2> We are proudly launching our new webenrol system that gives you more flexibility and greater support for your learners</h2>
-                <p> Our new version of webenrol goes above and beyond to bring you all the functionality you need to make your Users have a peaceful and informative
-                  experince. With new personal dashboards to store course information, personal calanders and Target setting functionality, you users will have acess to
-                  all the information they need to support their learning.
+          <div className='pageDivideDiv'>
+            <div className="pageDivide">
+              <div className='center-items'>
+                <p className='pagedivtext'>
+                  "The inexorable, gravitational pull
+                  of remote working practices and
+                  online learning
+                  has made us all more
+                  connected than ever."
                 </p>
-                <button className="seemore" onClick={ShowWebenrol}> See More </button>
+                <p>Over two decades learnerTrack MIS has built interconnectivity to facillitate remote partnership working.
+                  You can give access to your centralised systems to partner providers, each having strictly controlled
+                  access to their own data and reporting. A network of web services manage connections to DfE, LRS,
+                  Google Classroom, BKSB, payment card services, Royal Mail addressing, email verification systems and SMS
+                  messaging via GOV.UK Notify.</p>
               </div>
-
             </div>
-            <div className="webenrolcard">
-              <img className='webenrolimg' src={webenrol} alt="webenrol" />
+            <div className='interconectiviityBanner'>
+              <div className='center-items'>
+                <img className='interconectiviity' src={interconection} alt="Interconectiviity" />
+              </div>
             </div>
           </div>
-          {isWebenrolVisible &&
-            <div className="webenrolfeatures">
-              <div className="webenrolfeaturescard">
-                <div className='webenroltext'>
-                <h1>More For you</h1>
-                <h3> 
-                  WebEnrol publishes course information as a comprehensive online Prospectus that can be integrated with your corporate web site:
-                  Fully synchronised with your MIS, Learners can enrol, see upcoming courses and manage their classes with a personalised dashboard.</h3>
-                <ul>
-                  <li> Public web site automatically generated from your live MIS data</li>
-                  <li>Connection to learners tools like, google classroom and BKSB</li>
-                   <li>Personalised calenders and Course Information</li>
-                    <li>Both Sitewide and individual alert systems</li>
-                  <li>Feeds web based enquiries directly into your MIS</li>
-                   <li>Documents center for ILP's, LAGS and eligibility information</li>
-                  <li>Highest standards for Access by those with disabilities</li>
-                  <li>No site maintenance - automatically published from your MIS data</li>
-                  <li>Design templates for easy integration with your own web site </li>
-                  <li>Bespoke design and integration service also available</li>
-                  <li>Certified to the PCIDSS security standards introduced by Visa and MasterCard to ensure cardholders details are securely protected </li>
-                </ul>
-                </div>
-              </div>
-              <div className="webenrolfeaturescard">
-                <img className='WSmycourses' src={WSmycourses} alt="My-courses section" />
-              </div>
-            </div>
-          }
-
 
 
         </main>

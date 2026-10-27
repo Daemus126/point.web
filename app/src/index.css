@@ -201,7 +201,7 @@ width: 50%;
 .img-webenrol{
   padding-top: 1rem;
 height: 40%;
-width: 35%;
+width: 40%;
 }
 .img-dentry{
   padding-top: 1rem;
@@ -229,8 +229,8 @@ height: 30%;
 width: 30%;
 }
 .interconectiviity{
-  height: 50%;
-  width: 100%;
+ align-content: center;
+  width: 70%;
 }
 
  .info-grid-title {
@@ -263,7 +263,6 @@ width: 30%;
   min-width: 100%;
   padding: 1.25rem;
   color: var(--surface);
-  background-image: linear-gradient(to right,  rgb(63, 53, 196), rgba(63, 53, 200, 0.5));
   background-color: var(--colormain);
   text-align: center;
   font-size: 1.25rem;
@@ -336,6 +335,7 @@ color:#004880;
   padding: 2rem;
   border-bottom: 2rem solid var(--colormain);
   margin-top: 2rem;
+  margin-bottom: 4rem;
 
 }
 
