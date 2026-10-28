@@ -245,7 +245,10 @@ function App() {
             <li>View individual ILR data entities</li>
             <li>download XML ILR files for subcontractors</li>
           </ul>
-          <img className='FIS' src={Fis} alt="buisness rules" />
+
+          <p>FIS</p>
+          <p> Conection to FIS to track your ILR warnings and errors</p>
+           <p> In-built LearnerTrack warnng an error systems to keep your data in order</p>
         </div>
       </>
     )
@@ -282,28 +285,27 @@ function App() {
 
 
       <body>
+
         <div className="site-banner">
           <header className="site-header" id='scrollHome'>
-
-
-
-            <div className="navbar">
-              <img className="logo" src={Logo} alt="Monterpoint Logo" />
-              <nav>
-                <ul className="nav-links">
-                  <li className="nav-item" onClick={() => { scrollHome() }}><a href="#"> Home</a></li>
-                  <li className="nav-item" onClick={() => { scrollLearnerTrack() }}><a href="#">LearnerTrack</a></li>
-                  <li className="nav-item" onClick={() => { scrollwebenrol() }}><a href="#">Webenrol</a></li>
-                  <li className="nav-item" onClick={() => { scrollAbout() }}><a href="#">About Us</a></li>
-                  <li className="nav-item" onClick={() => { scrollSupport() }}><a href="#">Support</a></li>
-                  <li className="nav-item" onClick={() => { scrollService() }}><a href="#">Service</a></li>
-                  <li className="nav-item" onClick={() => { scrollfooter() }}><a href="#">Contact us</a></li>
-                </ul>
-              </nav>
-            </div>
+            <img className="logo" src={Logo} alt="Monterpoint Logo" />
           </header>
         </div>
 
+
+        <div className="navbar">
+          <nav>
+            <ul className="nav-links">
+              <li className="nav-item" onClick={() => { scrollHome() }}> Home</li>
+              <li className="nav-item" onClick={() => { scrollLearnerTrack() }}>LearnerTrack</li>
+              <li className="nav-item" onClick={() => { scrollwebenrol() }}>Webenrol</li>
+              <li className="nav-item" onClick={() => { scrollAbout() }}>About Us</li>
+              <li className="nav-item" onClick={() => { scrollSupport() }}>Support</li>
+              <li className="nav-item" onClick={() => { scrollService() }}>Service</li>
+              <li className="nav-item" onClick={() => { scrollfooter() }}>Contact us</li>
+            </ul>
+          </nav>
+        </div>
 
 
         <div className="sub-banner" >
@@ -343,16 +345,18 @@ function App() {
 
 
             </div>
+            <div className='scrolldiv' id='scrollLearnerTrack'></div>
 
-
-            <h3 className="info-grid-title" id='scrollLearnerTrack'>Key Features:</h3>
+            <h3 className="info-grid-title" >Key Features:</h3>
 
 
             <BrowserRouter>
               <nav>
                 <div className="info-grid">
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-gauge" src={Gauge} alt="gauge" />
+                    <div className="container">
+                      <img className="img-gauge" src={Gauge} alt="gauge" />
+                    </div>
                     <NavLink to="/performance" className="nav-item">
                       <h3>Performance Analysis</h3>
                       <p>QAR, KPI and performance reporting.</p>
@@ -360,7 +364,9 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-enrol" src={QEIMG} alt="Enrol" />
+                    <div class="container">
+                      <img className="img-enrol" src={QEIMG} alt="Enrol" />
+                    </div>
                     <NavLink to="/quickenrol">
                       <h3> Quick Enrol</h3>
                       <p>Manage all the course and enrolment information in one place</p>
@@ -368,7 +374,9 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-webenrol" src={WEBIMG} alt="web Enrol" />
+                    <div class="container">
+                      <img className="img-webenrol" src={WEBIMG} alt="web Enrol" />
+                    </div>
                     <NavLink to="/RollCall">
                       <h3>RollCall</h3>
                       <p>Online class register and attendance monitoring</p>
@@ -376,7 +384,9 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-dentry" src={Dentry} alt="data entry" />
+                    <div class="container">
+                      <img className="img-dentry" src={Dentry} alt="data entry" />
+                    </div>
                     <NavLink to="/dataEntry">
                       <h3>Data-Entry</h3>
                       <p>Control over all your data</p>
@@ -384,15 +394,20 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-Xfer" src={Xfers} alt="Xfers" />
+                    <div class="container">
+                      <img className="img-Xfer" src={Xfers} alt="Xfers" />
+                    </div>
                     <NavLink to="/xfer">
                       <h3>Xfer</h3>
                       <p>Enables data from 3rd party MIS to be imported, perfect for subcontacter merging</p>
+
                     </NavLink>
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-messaging" src={messaging} alt="messaging" />
+                    <div class="container">
+                      <img className="img-messaging" src={messaging} alt="messaging" />
+                    </div>
                     <NavLink to="/messaging">
                       <h3>Messaging</h3>
                       <p>Send messages to learners with ease</p>
@@ -400,7 +415,9 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-folder" src={folder} alt="folder" />
+                    <div class="container">
+                      <img className="img-folder" src={folder} alt="folder" />
+                    </div>
                     <NavLink to="/ilr">
                       <h3>ILR</h3>
                       <p>Data quality is central to LearnerTrack</p>
@@ -408,7 +425,9 @@ function App() {
                   </div>
 
                   <div className="info-card" onClick={scrollUnder}>
-                    <img className="img-investment" src={investment} alt="investment" />
+                    <div class="container">
+                      <img className="img-investment" src={investment} alt="investment" />
+                    </div>
                     <NavLink to="/finance">
                       <h3>Finance</h3>
                       <p>Financial tools for course fees, payments and cash flow</p>
@@ -486,9 +505,10 @@ function App() {
 
 
 
+          <div className='scrolldiv' id="scrollAbout"></div>
           <div className='center-items'>
             <div className="aboutSection">
-              <h1 className="header-color" id="scrollAbout">About Monterpoint Technologies</h1>
+              <h1 className="header-color" >About Monterpoint Technologies</h1>
               <p>Monterpoint Technologies is one of the UK’s
                 largest providers of DfE/ILR oriented software
                 as a service (SASS) with over 20 local authority
@@ -598,13 +618,15 @@ function App() {
               </p>
 
 
+              <div className='scrolldivsupport' id="scrollSupport"></div>
+
               <h3 >Minimal IT expertise needed</h3>
               <p className="feature-color">  Anyone can use LearnerTrack, we endeavour to make LeanerTrack as user friendly as possible so that anyone is able to use our system.
                 We offer free training sessions for SuperUsers, training sessions can be organised at any time and on any particular topic that
                 you need more guidnace on.
               </p>
 
-              <h3 id='scrollSupport'>Support </h3>
+              <h3 >Support </h3>
               <p className="feature-color"><strong>Our Support</strong> is free and provided to all LearnerTrack named Superusers within working hours.
                 As well as the comprehensive online, context sensitive user guide, our dedicated support team monitors incoming e-mails,
                 providing a rapid response service offering on-the-spot guidance and support and tracking progress of more complex queries.
