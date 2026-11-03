@@ -17,7 +17,7 @@ import performaceAnalysisIMG from './Pictures/performanceAnalysis.JPG';
 import quickEnrolIMG from './Pictures/quickenrol.JPG';
 import webenrolIMG from './Pictures/webenrol.JPG';
 import dentryimg from './Pictures/dentryimg.JPG';
-import interconection from './Pictures/interconection.png';
+import interconection from './Pictures/paint.JPG';
 import WSmycourses from './Pictures/westsussexmycourses.JPG';
 
 
@@ -456,7 +456,7 @@ function App() {
           <div className="webenrol" id='scrollwebenrol'>
             <div className="webenrolcard">
               <div className='webenroltext'>
-                <h1> Webenrol V2</h1>
+                <h1> Webenrol</h1>
                 <h2> We are proudly launching our new webenrol system that gives you more flexibility and greater support for your learners</h2>
                 <p> Our new version of webenrol goes above and beyond to bring you all the functionality you need to make your Users have a peaceful and informative
                   experince. With new personal dashboards to store course information, personal calanders and Target setting functionality, you users will have acess to
@@ -482,8 +482,6 @@ function App() {
                     <li> Public web site automatically generated from your live MIS data</li>
                     <li>Connection to learners tools like, google classroom and BKSB</li>
                     <li>Personalised calenders and Course Information</li>
-                    <li>Both Sitewide and individual alert systems</li>
-                    <li>Feeds web based enquiries directly into your MIS</li>
                     <li>Documents center for ILP's, LAGS and eligibility information</li>
                     <li>Highest standards for Access by those with disabilities</li>
                     <li>No site maintenance - automatically published from your MIS data</li>
