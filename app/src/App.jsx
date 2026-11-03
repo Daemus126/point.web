@@ -700,12 +700,12 @@ function App() {
 
       </body >
 
-  {/*
+ 
       <div className='verify' id='scrollfooter'>
-        <h2> Verified By</h2>
-        <img className='securityimg' src={cyberessencial} alt="security liecence" />
+       {/*  <h2> Verified By</h2>
+        <img className='securityimg' src={cyberessencial} alt="security liecence" /> */}
       </div>
-        */}
+       
       <Footer />
 
 
