@@ -2,23 +2,23 @@ import { useState } from 'react'
 import './App.css'
 import Footer from './Compnents/Footer.jsx'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import Logo from './Pictures/Monterpoint_logo.jpg'
-import LTlogo from './Pictures/LTlogo.png'
-import Gauge from './Pictures/gauge-chart.png'
-import QEIMG from './Pictures/QEIMG.png'
-import WEBIMG from './Pictures/enroll.png'
-import AttendanceIMG from './Pictures/Attendance.jpg'
-import Dentry from './Pictures/Dentry.png'
-import Xfers from './Pictures/Xfers.png'
-import messaging from './Pictures/messaging.png'
-import folder from './Pictures/folder.png'
-import investment from './Pictures/investment.png'
-import performaceAnalysisIMG from './Pictures/performanceAnalysis.jpg'
-import quickEnrolIMG from './Pictures/quickenrol.jpg'
-import webenrolIMG from './Pictures/webenrol.jpg'
-import dentryimg from './Pictures/dentryimg.jpg'
-import interconection from './Pictures/interconection.png'
-import WSmycourses from './Pictures/westsussexmycourses.JPG'
+import Logo from './Pictures/Monterpoint_logo.jpg';
+import LTlogo from './Pictures/LTlogo.gif';
+import Gauge from './Pictures/gauge-chart.png';
+import QEIMG from './Pictures/QEIMG.png';
+import WEBIMG from './Pictures/enroll.png';
+import AttendanceIMG from './Pictures/Attendance.jpg';
+import Dentry from './Pictures/Dentry.png';
+import Xfers from './Pictures/Xfers.png';
+import messaging from './Pictures/messaging.png';
+import folder from './Pictures/folder.png';
+import investment from './Pictures/investment.png';
+import performaceAnalysisIMG from './Pictures/performanceAnalysis.jpg';
+import quickEnrolIMG from './Pictures/quickenrol.jpg';
+import webenrolIMG from './Pictures/webenrol.jpg';
+import dentryimg from './Pictures/dentryimg.jpg';
+import interconection from './Pictures/interconection.png';
+import WSmycourses from './Pictures/westsussexmycourses.JPG';
 
 
 function App() {
