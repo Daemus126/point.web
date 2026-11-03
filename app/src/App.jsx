@@ -3,24 +3,22 @@ import './App.css'
 import Footer from './Compnents/Footer.jsx'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Logo from './Pictures/Monterpoint_logo.jpg'
-import LTlogo from './Pictures/LTLogo.gif'
+import LTlogo from './Pictures/LTlogo.png'
 import Gauge from './Pictures/gauge-chart.png'
 import QEIMG from './Pictures/QEIMG.png'
 import WEBIMG from './Pictures/enroll.png'
-import Attendance from './Pictures/Attendance.jpg'
+import AttendanceIMG from './Pictures/Attendance.jpg'
 import Dentry from './Pictures/Dentry.png'
 import Xfers from './Pictures/Xfers.png'
 import messaging from './Pictures/messaging.png'
 import folder from './Pictures/folder.png'
 import investment from './Pictures/investment.png'
-import performaceAnalysis from './Pictures/performanceAnalysis.jpg'
-import quickEnrol from './Pictures/quickenrol.jpg'
-import webenrol from './Pictures/webenrol.jpg'
+import performaceAnalysisIMG from './Pictures/performanceAnalysis.jpg'
+import quickEnrolIMG from './Pictures/quickenrol.jpg'
+import webenrolIMG from './Pictures/webenrol.jpg'
 import dentryimg from './Pictures/dentryimg.jpg'
-import cyberessencial from './Pictures/cyberessencial.png'
 import interconection from './Pictures/interconection.png'
 import WSmycourses from './Pictures/westsussexmycourses.JPG'
-import Fis from './Pictures/FIS.JPG'
 
 
 function App() {
@@ -112,7 +110,7 @@ function App() {
             <li>optional bespoke SAR reporting</li>
             <li>OFSTED reports</li>
           </ul>
-          <img className='perfomimg' src={performaceAnalysis} alt="Performance Analysis" />
+          <img className='perfomimg' src={performaceAnalysisIMG} alt="Performance Analysis" />
         </div>
       </>
     )
@@ -135,7 +133,7 @@ function App() {
             <li>Marketing brochure design support</li>
             <li>Fully integrated with LearnerTrack Web Enrol</li>
           </ul>
-          <img className='quickEnrol' src={quickEnrol} alt="Quick Enrol" />
+          <img className='quickEnrol' src={quickEnrolIMG} alt="Quick Enrol" />
         </div>
       </>
 
@@ -159,7 +157,7 @@ function App() {
             <li>Alerting of badly attended courses etc.</li>
             <li>Printed registers</li>
           </ul>
-          <img src={Attendance}></img>
+          <img src={AttendanceIMG} alt="Attendance" />
 
         </div>
       </>
@@ -469,7 +467,7 @@ function App() {
 
             </div>
             <div className="webenrolcard">
-              <img className='webenrolimg' src={webenrol} alt="webenrol" />
+              <img className='webenrolimg' src={webenrolIMG} alt="webenrol" />
             </div>
           </div>
           {isWebenrolVisible &&
