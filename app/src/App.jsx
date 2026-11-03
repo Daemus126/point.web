@@ -7,7 +7,7 @@ import LTlogo from './Pictures/LTlogo.gif';
 import Gauge from './Pictures/gauge-chart.png';
 import QEIMG from './Pictures/QEIMG.png';
 import WEBIMG from './Pictures/enroll.png';
-import AttendanceIMG from './Pictures/Attendance.JPG';
+import AttendanceIMG from './Pictures/attendance.JPG';
 import Dentry from './Pictures/Dentry.png';
 import Xfers from './Pictures/Xfers.png';
 import messaging from './Pictures/messaging.png';
