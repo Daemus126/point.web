@@ -278,6 +278,12 @@ font-weight: bold;
 }
 
 
+.security-button:hover{
+   background-color: var(--surface);
+  color : var(--colormain);
+}
+
+
 .pageDivideDiv{
   padding-top: 5rem;
 }
@@ -376,6 +382,11 @@ text-align: left;
     border: var(--colormain);
     font-weight: bold;
     border-radius: 0.25rem;
+}
+
+.seemore:hover{
+  background-color: white;
+    color:var(--colormain);
 }
 
 .webenrolfeatures{
