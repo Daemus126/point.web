@@ -707,8 +707,9 @@ function App() {
         <h2> Verified By</h2>
         <img className='securityimg' src={cyberessencial} alt="security liecence" />
       </div>
+        */}
       <Footer />
-  */}
+
 
 
 
